@@ -3,7 +3,6 @@
 /*   
 font-family: "Kulturista";
 font-weight: bold; */
-
 /*
 font-family: 'Itim', cursive;
 font-family: 'Kalam', cursive;
@@ -13,9 +12,10 @@ font-family: 'Poppins', sans-serif;
 */
 :root {
   --color-primary: #ffdc58;
+  --color-1: #ff2024;
+  --color-2: #116208;
   --color-bronze: #ed6d14;
   --color-silver: #848589;
-  --color-gold: #ffb435;
   --color-performance: #cf2e2e;
   --color-white: #fff;
   --color-black: #000;
@@ -109,7 +109,25 @@ footer {
   text-align: center;
 }
 .primary-color {
-  color: var(--color-primary);
+  color: var(--color-1);
+}
+/* Element Background Color */
+.primary-bg {
+  background-color: var(--color-1);
+  color: var(--color-black);
+}
+.primary-bg:hover {
+  background-color: var(--color-gray-200);
+  color: var(--color-black);
+}
+.box-shadow {
+  border-radius: 25px;
+  border: 2px solid var(--color-1);
+  box-shadow: 1px 1px 30px var(--color-1);
+}
+.box-border {
+  border-radius: 25px;
+  border: 2px solid var(--color-1);
 }
 /* Navigation */
 
@@ -199,7 +217,7 @@ nav {
   color: white;
 }
 .nav-link:hover {
-  color: var(--color-primary);
+  color: var(--color-1);
 }
 .navbar .nav-item .dropdown-menu {
   background-color: var(--color-black);
@@ -225,11 +243,11 @@ nav {
 
 /* Navigation - Drop Colors */
 .bg-dropdown-1:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-1);
   color: var(--color-black);
 }
 .bg-dropdown-2:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-1);
   color: var(--color-black);
 }
 
@@ -317,7 +335,7 @@ nav {
   background-color: var(--color-black);
   color: var(--color-white);
   border-radius: 25px;
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-1);
   padding: 1.5rem 1.5rem;
 }
 @media (max-width: 494px) {
@@ -339,7 +357,7 @@ textarea:focus ~ label,
 input:valid ~ label,
 textarea:valid ~ label {
   font-size: 1rem;
-  color: var(--color-primary);
+  color: var(--color-1);
   top: -10px;
   -webkit-transition: all 0.225s ease;
   transition: all 0.225s ease;
@@ -357,7 +375,7 @@ textarea:valid ~ label {
   margin: 25px auto;
 }
 .social-container {
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -382,7 +400,7 @@ textarea:valid ~ label {
 input,
 textarea {
   padding: 30px;
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-1);
   width: 100%;
   font-size: 1rem;
   background-color: var(--color-black);
@@ -401,7 +419,7 @@ textarea {
   transition: all 400ms ease;
 }
 .btn-submit:hover {
-  color: var(--color-primary);
+  color: var(--color-1);
   background-color: var(--color-gray-200);
   transform: scale(1.05);
 }
@@ -439,16 +457,14 @@ textarea {
 .rating-container {
   /* height: 340px; */
   /* border-radius: 25px; */
-  /* border: 2px solid var(--color-primary); */
+  /* border: 2px solid var(--color-1); */
   padding: 2rem 2rem;
 }
 /* Rating - Cards Body */
-.carousel-item {
-}
 .carousel-border {
   height: 340px;
   border-radius: 25px;
-  /* border: 2px solid var(--color-primary); */
+  /* border: 2px solid var(--color-1); */
 }
 .carousel-inner {
   justify-content: center;
@@ -487,14 +503,14 @@ textarea {
 }
 .verified {
   font-size: 0.8rem;
-  color: var(--color-primary);
+  color: var(--color-1);
 }
 .stars {
   width: auto;
 }
 .rating-data {
   margin: 0;
-  color: var(--color-primary);
+  color: var(--color-1);
 }
 @media (max-width: 992px) {
   .user-review {
@@ -532,13 +548,13 @@ textarea {
 
 /* Footer */
 hr.solid {
-  border: 5px solid var(--color-primary);
+  border: 5px solid var(--color-1);
   border-radius: 5px;
   opacity: 1;
   width: 90%;
 }
 hr.solid-sml {
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-1);
   border-radius: 5px;
   opacity: 1;
   width: 90%;
@@ -560,7 +576,7 @@ hr.solid-sml {
 
 /* Text Color + Format + Fonts */
 .color-primary-text {
-  color: var(--color-primary);
+  color: var(--color-1);
 }
 .font-marker {
   font-family: "Permanent Marker", cursive;
@@ -578,7 +594,7 @@ hr.solid-sml {
   font-size: 3rem;
   color: var(--color-white);
   text-shadow: -3px 0px 1px var(--color-black),
-    -3px 0px 10px var(--color-primary);
+    -3px 0px 10px var(--color-1);
 }
 .header-text {
   z-index: 3;
@@ -604,24 +620,7 @@ hr.solid-sml {
   }
 }
 
-/* Element Background Color */
-.primary-bg {
-  background-color: var(--color-primary);
-  color: var(--color-black);
-}
-.primary-bg:hover {
-  background-color: var(--color-gray-200);
-  color: var(--color-black);
-}
-.box-shadow {
-  border-radius: 25px;
-  border: 2px solid var(--color-primary);
-  box-shadow: 1px 1px 30px var(--color-primary);
-}
-.box-border {
-  border-radius: 25px;
-  border: 2px solid var(--color-primary);
-}
+
 /* Buttons */
 .btn-to-top {
   position: fixed;
@@ -633,7 +632,7 @@ hr.solid-sml {
 
 /* Cookies */
 .btn-cockie {
-  background-color: var(--color-primary);
+  background-color: var(--color-1);
 }
 .btn-cockie:hover {
   background-color: var(--color-gray-300);
@@ -680,7 +679,7 @@ hr.solid-sml {
   height: 6px;
   bottom: 0;
   left: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-1);
   transform-origin: bottom right;
   border-radius: 10px;
   transition: transform 0.3s ease-out;
@@ -695,7 +694,7 @@ hr.solid-sml {
   color: var(--color-white);
 }
 .color-hover:hover {
-  color: var(--color-primary);
+  color: var(--color-1);
 }
 
 /* Hover Transform Animation */
@@ -888,14 +887,14 @@ hr.solid-sml {
 
 .fa-brands {
   font-size: 25px;
-  color: var(--color-primary);
+  color: var(--color-1);
   padding: 10px 4px;
   width: 40px;
   margin-left: 8px;
 }
 .fa-phone {
   font-size: 25px;
-  color: var(--color-primary);
+  color: var(--color-1);
   padding: 10px 4px;
   width: 40px;
   margin-left: 8px;
@@ -941,7 +940,7 @@ hr.solid-sml {
   bottom: 0;
   width: 0%;
   position: fixed;
-  background-color: var(--color-primary);
+  background-color: var(--color-1);
   z-index: 9991;
 }
 
@@ -956,7 +955,7 @@ hr.solid-sml {
 }
 
 .footer-line {
-  border-bottom: 4px solid var(--color-primary);
+  border-bottom: 4px solid var(--color-1);
   width: 90%;
 }
 
