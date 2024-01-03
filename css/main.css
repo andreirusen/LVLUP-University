@@ -109,10 +109,11 @@ footer {
   align-items: center;
   text-align: center;
 }
+
+/* Element Background Color */
 .primary-color {
   color: var(--color-3);
 }
-/* Element Background Color */
 .primary-bg {
   background-color: var(--color-3);
   color: var(--color-black);
@@ -130,8 +131,9 @@ footer {
   border-radius: 25px;
   border: 2px solid var(--color-3);
 }
-/* Navigation */
 
+
+/* Navigation */
 .navbar-toggler {
   border: 0 !important;
 }
@@ -239,7 +241,7 @@ nav {
   height: 40px;
 }
 .icon-logo-fitness {
-  height: 40px;
+  height: 48px;
 }
 
 /* Navigation - Drop Colors */
@@ -594,8 +596,7 @@ hr.solid-sml {
   letter-spacing: 0.2rem;
   font-size: 3rem;
   color: var(--color-white);
-  text-shadow: -3px 0px 1px var(--color-black),
-    -3px 0px 10px var(--color-3);
+  text-shadow: -3px 0px 1px var(--color-black), -3px 0px 10px var(--color-3);
 }
 .header-text {
   z-index: 3;
@@ -620,7 +621,6 @@ hr.solid-sml {
     font-size: 2rem;
   }
 }
-
 
 /* Buttons */
 .btn-to-top {
@@ -872,7 +872,10 @@ hr.solid-sml {
 
 .fl-fl {
   border-radius: 25px 0 0 25px;
-  background: var(--color-black);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 4px;

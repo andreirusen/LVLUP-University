@@ -1,8 +1,8 @@
 // Loader
-var preloader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-  preloader.style.display = "none";
-});
+// var preloader = document.getElementById("preloader");
+// window.addEventListener("load", function () {
+//   preloader.style.display = "none";
+// });
 
 //Navigation
 // const navEL = document.querySelector(".navbar");
