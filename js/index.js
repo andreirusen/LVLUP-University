@@ -52,8 +52,8 @@ window.onscroll = function () {
 };
 function scrollFunction() {
   if (
-    document.body.scrollTop > 650 ||
-    document.documentElement.scrollTop > 650
+    document.body.scrollTop > 677 ||
+    document.documentElement.scrollTop > 677
   ) {
     btnToTop.style.display = "block";
     socialFloat.style.display = "none";
