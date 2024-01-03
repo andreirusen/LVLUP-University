@@ -147,6 +147,27 @@
                 >DESPRE</a
               >
             </li>
+            <!-- CONTACT -->
+            <li class="nav-item hover-underline-animation">
+              <a
+                href="#contact"
+                class="nav-link"
+                aria-current="page"
+                onclick="closeNavbar()"
+                >CONTACT</a
+              >
+            </li>
+
+            <!-- logo -->
+            <li class="nav-item d-none d-lg-block">
+              <a href="/index.html">
+                <img
+                  class="icon-logo-fitness transform-scale-md"
+                  src="/Assets/logo/LVLUP.png"
+                  alt="LOGO"
+                />
+              </a>
+            </li>
             <!-- ABONAMENTE -->
             <li class="nav-item dropdown hover-underline-animation">
               <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
@@ -177,26 +198,6 @@
                   >
                 </li>
               </ul>
-            </li>
-            <!-- logo -->
-            <li class="nav-item d-none d-lg-block">
-              <a href="/index.html">
-                <img
-                  class="icon-logo-fitness transform-scale-md"
-                  src="/Assets/logo/LVLUP.png"
-                  alt="LOGO"
-                />
-              </a>
-            </li>
-            <!-- CONTACT -->
-            <li class="nav-item hover-underline-animation">
-              <a
-                href="#contact"
-                class="nav-link"
-                aria-current="page"
-                onclick="closeNavbar()"
-                >CONTACT</a
-              >
             </li>
             <!-- LOCATIE -->
             <li class="nav-item hover-underline-animation">
@@ -361,6 +362,150 @@
         </div>
       </div>
     </main>
+
+    <!-- Contact -->
+    <section class="container p-1 p-sm-2 p-md-4 p-lg-5" id="contact">
+      <!-- Title -->
+      <div class="text-center p-1 p-sm-2 p-md-4 p-lg-5 reveal mx-5">
+        <h2 class="h-text">Contact</h2>
+        <h4 class="text-light text-center text-size-md">
+          Pentru orice informatie nu ezitati sa ne contactati
+        </h4>
+      </div>
+      <!-- Form Section -->
+      <div class="container">
+        <div class="row">
+          <!-- Left Container -->
+          <div class="col-md-5 contact-container justify-content-start">
+            <div class="row reveal">
+              <h2 class="h-text">Social</h2>
+            </div>
+            <div class="row reveal">
+              <h4 class="text-light text-left text-size-lg">
+                <p class="my-5">
+                  <a
+                    href="tel:+40771810711"
+                    target="_blank"
+                    class="social-color"
+                  >
+                    <i
+                      class="fa-solid fa-phone"
+                      style="color: var(--color-3)"
+                    ></i>
+                    +40 771 810 710
+                  </a>
+                </p>
+                <p class="my-5">
+                  <a
+                    href="https://wa.me/0771810710"
+                    target="_blank"
+                    class="social-color"
+                  >
+                    <i
+                      class="fa-brands fa-whatsapp"
+                      style="color: var(--color-3)"
+                    ></i>
+                    +40 771 810 710
+                  </a>
+                </p>
+                <p class="my-5">
+                  <a
+                    href="https://www.facebook.com/CursurideinotLVLUP"
+                    target="_blank"
+                    class="social-color"
+                  >
+                    <i
+                      class="fa-brands fa-facebook"
+                      style="color: var(--color-3)"
+                    ></i>
+                    LVLUP Athletic
+                  </a>
+                </p>
+                <p class="my-5">
+                  <a
+                    href="https://www.instagram.com/cursuri_inot_LVLUP/"
+                    target="_blank"
+                    class="social-color"
+                  >
+                    <i
+                      class="fa-brands fa-instagram"
+                      style="color: var(--color-3)"
+                    ></i>
+                    LVLUP Athletic
+                  </a>
+                </p>
+                <p class="my-5 d-none">
+                  <i class="fa-brands fa-tiktok" style="color: #ffffff"></i>
+                  Cursuri_Inot_LVLUP
+                </p>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Midle Container -->
+          <h2
+            class="col-md-2 contact-container text-center h-text d-none d-md-block reveal"
+          >
+            /
+          </h2>
+
+          <!-- Right Container -->
+          <div class="col-md-5 contact-container">
+            <div class="row reveal">
+              <h1 class="h-text">Email</h1>
+            </div>
+            <div class="row reveal">
+              <h4 class="text-center text-light"></h4>
+            </div>
+            <form
+              class="row form-container reveal"
+              action="https://formspree.io/f/xknaeajd"
+              method="POST"
+              name="contact-form"
+              accept-charset="utf-8"
+            >
+              <div class="col-xs-12">
+                <div class="styled-input wide">
+                  <input type="text" name="name" required />
+                  <label>Nume</label>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="styled-input wide">
+                  <input type="email" name="_replyto" required />
+                  <label>Email</label>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="styled-input wide">
+                  <input type="text" name="number" required />
+                  <label>Numar Telefon</label>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="styled-input wide">
+                  <textarea name="message" id="message" required></textarea>
+                  <label>Mesaj</label>
+                </div>
+              </div>
+              <input
+                type="hidden"
+                name="_subject"
+                id="email-subject"
+                value="Survey Responses"
+              />
+              <button
+                class="col btn-submit btn btn-lg primary-bg fw-semibold"
+                type="submit"
+                value="Contact Form Submission"
+              >
+                Trimite
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Abonamente -->
     <section class="container p-1 p-sm-2 p-md-4 p-lg-5" id="abonamente">
@@ -577,149 +722,14 @@
       </p>
     </section>
 
-    <!-- Contact -->
-    <section class="container p-1 p-sm-2 p-md-4 p-lg-5" id="contact">
-      <!-- Title -->
-      <div class="text-center p-1 p-sm-2 p-md-4 p-lg-5 reveal mx-5">
-        <h2 class="h-text">Contact</h2>
-        <h4 class="text-light text-center text-size-md">
-          Pentru orice informatie nu ezitati sa ne contactati
-        </h4>
-      </div>
-      <!-- Form Section -->
-      <div class="container">
-        <div class="row">
-          <!-- Left Container -->
-          <div class="col-md-5 contact-container justify-content-start">
-            <div class="row reveal">
-              <h2 class="h-text">Social</h2>
-            </div>
-            <div class="row reveal">
-              <h4 class="text-light text-left text-size-lg">
-                <p class="my-5">
-                  <a
-                    href="tel:+40771810711"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-solid fa-phone"
-                      style="color: var(--color-3)"
-                    ></i>
-                    +40 771 810 710
-                  </a>
-                </p>
-                <p class="my-5">
-                  <a
-                    href="https://wa.me/0771810710"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-brands fa-whatsapp"
-                      style="color: var(--color-3)"
-                    ></i>
-                    +40 771 810 710
-                  </a>
-                </p>
-                <p class="my-5">
-                  <a
-                    href="https://www.facebook.com/CursurideinotLVLUP"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-brands fa-facebook"
-                      style="color: var(--color-3)"
-                    ></i>
-                    LVLUP Athletic
-                  </a>
-                </p>
-                <p class="my-5">
-                  <a
-                    href="https://www.instagram.com/cursuri_inot_LVLUP/"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-brands fa-instagram"
-                      style="color: var(--color-3)"
-                    ></i>
-                    LVLUP Athletic
-                  </a>
-                </p>
-                <p class="my-5 d-none">
-                  <i class="fa-brands fa-tiktok" style="color: #ffffff"></i>
-                  Cursuri_Inot_LVLUP
-                </p>
-              </h4>
-            </div>
-          </div>
-
-          <!-- Midle Container -->
-          <h2
-            class="col-md-2 contact-container text-center h-text d-none d-md-block reveal"
-          >
-            /
-          </h2>
-
-          <!-- Right Container -->
-          <div class="col-md-5 contact-container">
-            <div class="row reveal">
-              <h1 class="h-text">Email</h1>
-            </div>
-            <div class="row reveal">
-              <h4 class="text-center text-light"></h4>
-            </div>
-            <form
-              class="row form-container reveal"
-              action="https://formspree.io/f/xknaeajd"
-              method="POST"
-              name="contact-form"
-              accept-charset="utf-8"
-            >
-              <div class="col-xs-12">
-                <div class="styled-input wide">
-                  <input type="text" name="name" required />
-                  <label>Nume</label>
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="styled-input wide">
-                  <input type="email" name="_replyto" required />
-                  <label>Email</label>
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="styled-input wide">
-                  <input type="text" name="number" required />
-                  <label>Numar Telefon</label>
-                </div>
-              </div>
-              <div class="col-xs-12">
-                <div class="styled-input wide">
-                  <textarea name="message" id="message" required></textarea>
-                  <label>Mesaj</label>
-                </div>
-              </div>
-              <input
-                type="hidden"
-                name="_subject"
-                id="email-subject"
-                value="Survey Responses"
-              />
-              <button
-                class="col btn-submit btn btn-lg primary-bg fw-semibold"
-                type="submit"
-                value="Contact Form Submission"
-              >
-                Trimite
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Location Map -->
+    <div class="container bg-black p-1 p-sm-2 p-md-4 p-lg-5" id="locatie">
+      <div
+        id="map"
+        style="width: 100%; height: 400px"
+        class="container bg-white reveal box-border"
+      ></div>
+    </div>
 
     <!-- Rating   -->
     <section class="container" id="recenzii">
@@ -1040,15 +1050,6 @@
         </button>
       </div>
     </section>
-
-    <!-- Location Map -->
-    <div class="container bg-black p-1 p-sm-2 p-md-4 p-lg-5" id="locatie">
-      <div
-        id="map"
-        style="width: 100%; height: 400px"
-        class="container bg-white reveal box-border"
-      ></div>
-    </div>
 
     <!-- Footer Section -->
     <footer class="footer pt-5 px-3" id="program" id="program">
