@@ -520,21 +520,23 @@
         <!-- Continut -->
         <span class="text-wrap text-white text-justify align-self-center my-5">
           <p class="text-size-md reveal">
-            Dorim să oferim tuturor posibilitatea de a învăța și de a adopta un
-            nou stil de viață, indiferent de vârstă. Astfel, ne-am structurat
-            cursurile în mai multe categorii, atât fizice, cât și online.
+            Dorim să oferim tuturor posibilitatea de a adopta un stil de viață
+            sănătos, indiferent de vârstă. Astfel, ne-am structurat cursurile în
+            mai multe categorii, atât fizice, cât și online.
           </p>
           <br />
           <p class="text-size-md reveal">
             Fiecare categorie are multiple variante de program, adaptate
             nevoilor și disponibilității fiecăruia. În continuare, vă prezentăm
-            detalii legate de abonamente, modul în care acestea se desfășoară,
-            durata și costurile aferente, într-un tabel clar și concis.
+            detalii legate de costul și durata abonamentelor și modul în care
+            acestea se desfășoară, într-un tabel clar și concis.
           </p>
-          <br />
           <p class="text-size-md reveal">
-            *Abonamentele de grup necesită cel puțin
-            <span class="primary-color"> două persoane</span> de același nivel.
+            * Mai multe
+            <a href="#informatii-abonamente" class="primary-color"
+              >informații</a
+            >
+            puteți găsi după tabelul cu abonamente.
           </p>
         </span>
       </div>
@@ -546,15 +548,19 @@
               <th scope="col">Tip</th>
               <th scope="col">Nr. Sedinte</th>
               <th scope="col">Durata</th>
-              <th scope="col">Pret</th>
+              <th scope="col">Pret Vechi</th>
+              <th scope="col">
+                <span class="text-uppercase font-marker">Pret Nou</span>
+              </th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
+            <!-- Grup -->
             <tr class="text-center">
               <th scope="row">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-user"
+                  class="icon icon-tabler icon-tabler-users-group"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -565,40 +571,20 @@
                   stroke-linejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                  <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                  <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+                  <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                  <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+                  <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                  <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
                 </svg>
                 <br />
-                (Fizic)
+                Grup
               </th>
               <td>4</td>
               <td>30 Zile</td>
-              <td>300 RON</td>
-            </tr>
-            <tr class="text-center">
-              <th scope="row">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-user"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-                </svg>
-                <br />
-                (Fizic)
-              </th>
-              <td>8</td>
-              <td>30 Zile</td>
-              <td>500 RON</td>
+              <td class="text-decoration-line-through">300 RON</td>
+              <td class="fw-bold primary-color">199 RON</td>
             </tr>
             <tr class="text-center">
               <th scope="row">
@@ -623,17 +609,19 @@
                   <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
                 </svg>
                 <br />
-                (Fizic)
+                Grup
               </th>
-              <td>4</td>
+              <td>8</td>
               <td>30 Zile</td>
-              <td>150 RON</td>
+              <td class="text-decoration-line-through">500 RON</td>
+              <td class="fw-bold primary-color">399 RON</td>
             </tr>
+            <!-- Individual -->
             <tr class="text-center">
               <th scope="row">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-users-group"
+                  class="icon icon-tabler icon-tabler-user"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -644,21 +632,45 @@
                   stroke-linejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
-                  <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
-                  <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
+                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
                 </svg>
                 <br />
-                (Fizic)
+                Individual
+              </th>
+              <td>4</td>
+              <td>30 Zile</td>
+              <td class="text-decoration-line-through">400 RON</td>
+              <td class="fw-bold primary-color">299 RON</td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-user"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                </svg>
+                <br />
+                Individual
               </th>
               <td>8</td>
               <td>30 Zile</td>
-              <td>300 RON</td>
+              <td class="text-decoration-line-through">600 RON</td>
+              <td class="fw-bold primary-color">499 RON</td>
             </tr>
-            <tr class="text-center">
+            <!-- Online -->
+            <tr class="text-center" id="informatii-abonamente">
               <th scope="row">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -679,69 +691,117 @@
                   ></path>
                 </svg>
                 <br />
-                (Online)
+                Online
               </th>
-              <td>4</td>
+              <td>24/24</td>
               <td>30 Zile</td>
-              <td>200 RON</td>
-            </tr>
-            <tr class="text-center">
-              <th scope="row">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-device-laptop"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M3 19l18 0"></path>
-                  <path
-                    d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"
-                  ></path>
-                </svg>
-                <br />
-                (Online)
-              </th>
-              <td>8</td>
-              <td>30 Zile</td>
-              <td>300 RON</td>
+              <td class="text-decoration-line-through">500 RON</td>
+              <td class="fw-bold primary-color">249 RON</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p
+      <div
         class="text-size-md reveal text-wrap text-white text-justify align-self-center my-5 container"
       >
-        <span class="">
-          *În cazul achiziționării a cinci abonamente, veți beneficia de un
-          <span class="primary-color">tricou gratuit</span> și veți fi incluși
-          în comunitatea noastră.
-        </span>
-      </p>
+        <p class="reveal">
+          * In cazul abonamentelor fizice, clientul va beneficia de
+          <span class="primary-color fw-bold">prima ședință gratuită</span>.
+        </p>
+        <br />
+
+        <p class="reveal">
+          * Abonamentele de <span class="primary-color">Grup</span> necesită cel
+          puțin <span class="primary-color"> două persoane</span> de același
+          nivel sau cu obiectiv asemănător. Nivelul de pregătire va fi hotarât
+          în ședință gratuită.
+        </p>
+        <br />
+        <p class="reveal">
+          * Nivelul de pregătire va fi hotarât în ședință gratuită.
+        </p>
+        <br />
+        <p class="reveal">
+          * La achizitionarea programului
+          <span class="primary-color">Online</span> comunicarea se poate face
+          <span class="primary-color">24/24</span> pe toata perioada de 30 zile.
+        </p>
+        <br />
+        <p class="reveal">
+          <span class="">
+            * După achiziționarea a cinci abonamente, veți beneficia de un
+            <span class="primary-color fw-bold">tricou gratuit</span> și veți fi
+            incluși în comunitatea noastră
+            <span class="primary-color">LVLUP Athletic</span>.
+          </span>
+        </p>
+      </div>
     </section>
 
     <!-- Location Map -->
     <div class="container bg-black p-1 p-sm-2 p-md-4 p-lg-5" id="locatie">
-      <div
-        id="map"
-        style="width: 100%; height: 400px"
-        class="container bg-white reveal box-border"
-      ></div>
+      <!-- Text -->
+      <div class="container">
+        <!-- Titlu  -->
+        <h1 class="text-center h-text my-5 reveal">Locatie sala</h1>
+        <!-- Continut -->
+        <div class="row text-center">
+          <!-- Stay Fit Gym - Pantelimon -->
+          <div
+            class="col-md-6 text-wrap text-white align-self-center my-5 text-size-md reveal"
+          >
+          <p>
+            <span class="primary-color"> Stay Fit Gym - Pantelimon </span>
+          </p>
+          <p>
+            Stay Fit Gym - Pantelimon, Bulevardul Chișinău 1, București 022141
+          </p>
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11393.66290536572!2d26.1575!3d44.445146!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f92ff495235d%3A0xa67b9131c2d3d501!2sStay%20Fit%20Gym%20-%20Pantelimon!5e0!3m2!1sen!2sro!4v1704392822832!5m2!1sen!2sro"
+                style="width: 100%; height: 400px"
+                class="container bg-white box-border reveal"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Stay Fit Gym - Fizicienilor -->
+          <div
+            class="col-md-6 text-wrap text-white align-self-center my-5 text-size-md reveal"
+          >
+          <p>
+            <span class="primary-color"> Stay Fit Gym - Fizicienilor </span>
+          </p>
+          <p>
+            Stay Fit Gym - Fizicienilor, Strada Fizicienilor 1, București 077160
+          </p>
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.9934431918027!2d26.14757267650583!3d44.41278027107622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff1eed39824b%3A0xe65c8cbbce5487a8!2sStay%20Fit%20Gym%20-%20Fizicienilor!5e0!3m2!1sen!2sro!4v1704393038175!5m2!1sen!2sro"
+                style="width: 100%; height: 400px"
+                class="container bg-white box-border reveal"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Rating   -->
+    <!-- Rating -->
     <section class="container" id="recenzii">
       <!-- Rating Title  -->
       <div class="container my-5">
         <div class="header-content container reveal text-size-md">
           <h1>
-            500<span class="color-primary-text">+</span> de persoane mulțumite
+            Experiența de <span class="color-primary-text">5 ani</span> în
+            domeniu
           </h1>
           <p class="text-justify">
             Oferim doar
@@ -803,12 +863,11 @@
               </div>
               <!-- User Message + Date -->
               <p>
-                "L-am înscris pe fiul meu la ședințele cu Alin pentru a-i
-                îmbunătăți încrederea și îndemânarea în apă și am fost
-                impresionat de progresele pe care le-a făcut în doar câteva
-                săptămâni. Instructorul este atent și dedicat, iar metodele sale
-                de învățare sunt eficiente. Recomand cu încredere aceste
-                cursuri!"
+                "L-am înscris pe fiul meu la ședințele cu Andrei pentru a-i
+                îmbunătăți încrederea și îndemânarea. Am fost impresionat de
+                progresele pe care le-a făcut în doar câteva săptămâni.
+                Antrenorul este atent și dedicat, iar metodele sale de învățare
+                sunt eficiente. Recomand cu încredere!"
               </p>
               <p class="rating-data">
                 Date: <span class="text-white">14/05/2023</span>
@@ -859,10 +918,9 @@
               </div>
               <!-- User Message + Date -->
               <p>
-                "Sunt foarte mulțumită de progresele pe care le-a făcut fiul meu
-                în timpul cursurilor de înot cu Rusen Alin. Instructorul este
-                atent și dedicat, iar metodele sale de învățare sunt eficiente
-                și distractive. Recomand!"
+                "Sunt foarte mulțumită de progresele pe care le-am făcut alaturi
+                de Andrei. Este atent și dedicat, iar metodele sale de învățare
+                sunt eficiente și distractive. Recomand!"
               </p>
               <p class="rating-data">
                 Date: <span class="text-white">16/02/2023</span>
@@ -913,11 +971,9 @@
               </div>
               <!-- User Message + Date -->
               <p>
-                " Am început cursurile de înot cu Rusen ca începător și acum,
-                după doar câteva luni, mă simt în siguranță și încrezător în
-                apă. Instructorul este profesionist și pasionat, iar atmosfera
-                din cadrul cursurilor este relaxată și încurajatoare. Recomand
-                cu încredere."
+                "Am venit aici pe recomandarea unei prietene. Încă nu pot să
+                înțeleg câtă răbdare și pasiune oferă când vine vorba de
+                corectarea exercițiilor sau îmbunătățirea tehnicii."
               </p>
               <p class="rating-data">
                 Date: <span class="text-white">02/03/2023</span>
@@ -968,9 +1024,12 @@
               </div>
               <!-- User Message + Date -->
               <p>
-                "Cursurile de înot cu Alin au fost o experiență fantastică
-                pentru fiica mea. În scurt timp și-a îmbunătățit încrederea și
-                condiția fizică. Cursuri de nota 10!"
+                "Am început antrenamentele cu domnul Andrei de câteva luni și
+                pot spune că progresul se vede, atât fizic, cât și psihic. Mă
+                simt mai încrezător în puterile și abilitățile mele. Andrei este
+                extrem de profesionist și pasionat, iar atmosfera din cadrul
+                antrenamentelor este relaxată și încurajatoare. Recomand cu
+                încredere."
               </p>
               <p class="rating-data">
                 Date: <span class="text-white">02/03/2023</span>
@@ -1060,49 +1119,28 @@
       <div
         class="container row justify-content-md-center align-content-md-center text-md-start"
       >
-        <!-- Program Inot (Fizic) -->
+        <!-- Program (Fizic) -->
         <div
           class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5"
         >
-          <p href="#" class="text-uppercase fw-bold">
-            Program Inot
-            <span class="fw-light"> <br />(Fizic)</span>
-          </p>
+          <p href="#" class="text-uppercase fw-bold">Program Fizic</p>
           <hr class="solid" />
-          <p class="fw-bold">Luni- Vineri:</p>
-          <p>16:00 PM - 20:00 PM</p>
+          <p class="fw-bold">Luni - Vineri:</p>
+          <p>07:00 AM - 23:00 PM</p>
           <p class="fw-bold">Sâmbătă - Duminică:</p>
-          <p>Închis</p>
+          <p>08:00 AM - 20:00 PM</p>
         </div>
 
-        <!-- Program Fitness (Fizic) -->
+        <!-- Program (Online) -->
         <div
           class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5"
         >
-          <p href="#" class="text-uppercase fw-bold">
-            Program Fitness
-            <span class="fw-light"> <br />(Fizic)</span>
-          </p>
+          <p href="#" class="text-uppercase fw-bold">Program Online</p>
           <hr class="solid" />
-          <p class="fw-bold">Luni- Vineri:</p>
-          <p>16:00 PM - 20:00 PM</p>
+          <p class="fw-bold">Luni - Duminică:</p>
+          <p>07:00 AM - 23:00 PM</p>
           <p class="fw-bold">Sâmbătă - Duminică:</p>
-          <p>09:00 PM - 13:00 PM</p>
-        </div>
-
-        <!-- Program Fitness (Online) -->
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5"
-        >
-          <p href="#" class="text-uppercase fw-bold">
-            Program Fitness
-            <span class="fw-light"> <br />(Online)</span>
-          </p>
-          <hr class="solid" />
-          <p class="fw-bold">Luni- Vineri:</p>
-          <p>8:00 AM - 23:00 PM</p>
-          <p class="fw-bold">Sâmbătă - Duminică:</p>
-          <p>8:00 AM - 20:00 PM</p>
+          <p>08:00 AM - 20:00 PM</p>
         </div>
 
         <!-- ANPC -->
@@ -1111,7 +1149,7 @@
         >
           <p class="text-uppercase">
             <a href="#home" class="color-hover fw-bold"
-              >LVLUP
+              >LVLUP Athletic
               <span>
                 &copy;
                 <script>
@@ -1119,7 +1157,6 @@
                 </script>
               </span>
               <br />
-              <span class="fw-light">#LVLUP Athletic</span>
             </a>
           </p>
           <hr class="solid" />
