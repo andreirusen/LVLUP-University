@@ -144,33 +144,40 @@ font-family: 'Poppins', sans-serif;
   transform: scale(1.2);
 }
 
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
 /* Background */
 .swiper-slide--one {
   border-radius: 25px;
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("/assets/cards/Andrei.JPG") no-repeat 50% 50% / cover;
+    url("/assets/cards/1.png") no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--two {
   border-radius: 25px;
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("/assets/cards/Alin.png") no-repeat 50% 50% / cover;
+    url("/assets/cards/2.png") no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--three {
   border-radius: 25px;
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("/assets/cards/Alex.JPG") no-repeat 50% 50% / cover;
+    url("/assets/cards/3.png") no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--four {
   border-radius: 25px;
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("/assets/home/2.2.jpg") no-repeat 50% 50% / cover;
+    url("/assets/cards/4.png") no-repeat 50% 50% / cover;
 }
 
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right {
-  background-image: none;
+.swiper-slide--five {
+  border-radius: 25px;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("/assets/cards/5.png") no-repeat 50% 50% / cover;
 }
+
 
