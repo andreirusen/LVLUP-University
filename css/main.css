@@ -970,3 +970,18 @@ hr.solid-sml {
 .social-color {
   color: var(--color-white);
 }
+
+.wrapper-confetti {
+  position: relative;
+}
+.confetti-button {
+  cursor: pointer;
+  transition: transform 150ms ease-in;
+}
+.wrapper-confetti canvas {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

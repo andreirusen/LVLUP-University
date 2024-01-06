@@ -80,6 +80,9 @@
       })({ key: "AIzaSyC_s-dLS1bgs-qXCqLDdGoBJne4ox4sxbw", v: "weekly" });
     </script>
 
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+
     <!-- Swipper -->
     <link
       rel="stylesheet"
@@ -174,6 +177,15 @@
                     href="#abonamente"
                     onclick="closeNavbar()"
                     >Individual</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-2 fw-semibold"
+                    href="#abonamente"
+                    onclick="closeNavbar()"
+                    >Online</a
                   >
                 </li>
               </ul>
@@ -750,8 +762,8 @@
               <h4 class="text-center text-light"></h4>
             </div>
             <form
-              class="row form-container reveal"
-              action="https://formspree.io/f/xknaeajd"
+              class="row form-container reveal wrapper-confetti"
+              action="https://formspree.io/f/mzbnbord"
               method="POST"
               name="contact-form"
               accept-charset="utf-8"
@@ -785,9 +797,9 @@
                 name="_subject"
                 id="email-subject"
                 value="Survey Responses"
-              />
+              />  
               <button
-                class="col btn-submit btn btn-lg primary-bg fw-semibold"
+                class="col btn-submit btn btn-lg primary-bg fw-semibold confetti-button"
                 type="submit"
                 value="Contact Form Submission"
               >
