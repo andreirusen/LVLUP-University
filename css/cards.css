@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*
+font-family: 'Itim', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Patrick Hand', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Poppins', sans-serif; 
+*/
+:root {
+  --color-primary: #ffdc58;
+  --color-1: #ff2024;
+  --color-2: #116208;
+  --color-3: #ffa224;
+  --color-bronze: #ed6d14;
+  --color-silver: #848589;
+  --color-performance: #cf2e2e;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-100: #f8f9fc;
+  --color-gray-200: #f1f3f9;
+  --color-gray-300: #dee3ed;
+  --color-gray-400: #c2c9d6;
+  --color-gray-500: #8f96a3;
+  --color-gray-600: #5e636e;
+  --color-gray-700: #2f3237;
+  --color-gray-800: #1d1e20;
+  --color-gray-900: #111213;
+  --shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
+    0 1px 4px -1px rgba(0, 0, 0, 0.04);
+  --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
+    0 6px 20px -3px rgba(0, 0, 0, 0.2);
+  --font-size-small: 18px;
+  --font-size-medium: 22px;
+  --font-size-large: 26px;
+  --font-size-x-large: 30px;
+  --spacing-20: 0.44rem;
+  --spacing-30: 0.67rem;
+  --spacing-40: 1rem;
+  --spacing-50: 1.5rem;
+  --spacing-60: 2.25rem;
+  --spacing-70: 3.38rem;
+  --spacing-80: 5.06rem;
+}
+
+.wrapper-pricing-tables{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrapper-pricing-tables .table{
+  background: var(--color-black);
+  border: 1px var(--color-3);
+  width: calc(33% - 20px);
+  padding: 30px 30px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  border: 2px solid var(--color-3);
+  border-radius: 25px;
+}
+.table .price-section{
+  display: flex;
+  justify-content: center;
+}
+.table .price-area{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 2px;
+}
+.price-area .inner-area{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--color-black);
+  line-height: 117px;
+  text-align: center;
+  color: var(--color-black);
+  position: relative;
+}
+.price-area .inner-area .text{
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.price-area .inner-area .price{
+  font-size: 30px;
+  font-weight: bold;
+}
+.table .package-name{
+  width: 100%;
+  height: 2px;
+  margin: 35px 0;
+  position: relative;
+}
+.table .package-name::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  font-weight: 500;
+  background: var(--color-3);
+  padding: 0 15px;
+  transform: translate(-50%, -50%);
+}
+.table .features li{
+  margin-bottom: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.features li .list-name{
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+.features li .icon{
+  font-size: 15px;
+}
+.features li .icon.check{
+  color: var(--color-3);
+}
+.features li .icon.cross{
+  color: #cd3241;
+}
+.table .btn{
+  width: 100%;
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+}
+.table .btn button{
+  width: 80%;
+  height: 50px;
+  color: var(--color-black);
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.basic .features li::selection{
+  background: var(--color-3);
+}
+
+/* Basic plan */
+.basic ::selection,
+.basic .price-area,
+.basic .inner-area{
+  background: var(--color-3);
+}
+.basic .btn button{
+  background: var(--color-3);
+  color: var(--color-black);
+}
+.basic .btn button:hover{
+  background:var(--color-white);
+}
+
+/* Premium Plan */
+.premium ::selection,
+.premium .price-area,
+.premium .inner-area,
+.premium .btn button{
+  background: var(--color-3);
+}
+.premium .btn button:hover{
+  background: var(--color-white);
+}
+
+/* Ultimate Plan */
+.ultimate ::selection,
+.ultimate .price-area,
+.ultimate .inner-area{
+  background: var(--color-3);
+}
+.ultimate .btn button{
+  color: var(--color-black);
+  background: var(--color-3);
+}
+.ultimate .btn button:hover{
+  background: var(--color-white);
+}
+
+
+
+/* Names */
+.basic .package-name{
+  background: var(--color-gray-100);
+}
+.premium .package-name{
+  background: var(--color-gray-100);
+}
+.ultimate .package-name{
+  background: var(--color-gray-100);
+}
+.basic .package-name::before{
+  content: "3 LUNI";
+  font-size: 24px;
+
+}
+.premium .package-name::before{
+  content: "1 LUNA";
+  font-size: 24px;
+}
+.ultimate .package-name::before{
+  content: "6 LUNI";
+  font-size: 24px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .wrapper-pricing-tables .table{
+    width: 100%;
+  }
+}
+
+
+::selection{
+  color: #fff;
+}
+.table .ribbon{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  overflow: hidden;
+}
+.table .ribbon::before,
+.table .ribbon::after{
+  position: absolute;
+  content: "";
+  z-index: -1;
+  display: block;
+  border: 7px solid var(--color-1);
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.table .ribbon::before{
+  top: 0px;
+  right: 15px;
+}
+.table .ribbon::after{
+  bottom: 15px;
+  left: 0px;
+}
+/* RECOMMEND Ribbon*/
+.table .ribbon span{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  transform: rotate(-45deg);
+  width: 200px;
+  background: var(--color-1);
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+}
