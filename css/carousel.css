@@ -41,7 +41,6 @@ font-family: 'Poppins', sans-serif;
   --spacing-70: 3.38rem;
   --spacing-80: 5.06rem;
 }
-
 .section-cards {
   position: relative;
   display: flex;

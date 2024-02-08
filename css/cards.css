@@ -41,7 +41,10 @@ font-family: 'Poppins', sans-serif;
   --spacing-70: 3.38rem;
   --spacing-80: 5.06rem;
 }
-
+.a-button {
+  text-decoration: none;
+  color: black;
+}
 .wrapper-pricing-tables{
   width: 100%;
   margin: auto;
@@ -106,6 +109,9 @@ font-family: 'Poppins', sans-serif;
   padding: 0 15px;
   transform: translate(-50%, -50%);
 }
+.table .features {
+  height: 150px;
+}
 .table .features li{
   margin-bottom: 15px;
   list-style: none;
@@ -113,7 +119,7 @@ font-family: 'Poppins', sans-serif;
   justify-content: space-between;
 }
 .features li .list-name{
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--color-white);
 }
@@ -126,6 +132,7 @@ font-family: 'Poppins', sans-serif;
 .features li .icon.cross{
   color: #cd3241;
 }
+
 .table .btn{
   width: 100%;
   display: flex;
@@ -200,12 +207,12 @@ font-family: 'Poppins', sans-serif;
   background: var(--color-gray-100);
 }
 .basic .package-name::before{
-  content: "3 LUNI";
+  content: "1 LUNA";
   font-size: 24px;
 
 }
 .premium .package-name::before{
-  content: "1 LUNA";
+  content: "3 LUNI";
   font-size: 24px;
 }
 .ultimate .package-name::before{
