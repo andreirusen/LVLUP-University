@@ -360,8 +360,10 @@ nav {
 }
 input:focus ~ label,
 textarea:focus ~ label,
+option:focus ~ label,
 input:valid ~ label,
-textarea:valid ~ label {
+textarea:valid ~ label,
+option:valid ~ label {
   font-size: 1rem;
   color: var(--color-3);
   top: -10px;
@@ -404,13 +406,24 @@ textarea:valid ~ label {
   max-width: 100%;
 }
 input,
-textarea {
+textarea,
+option {
   padding: 30px;
   border: 2px solid var(--color-3);
   width: 100%;
   font-size: 1rem;
   background-color: var(--color-black);
   color: white;
+  border-radius: 4px;
+}
+.select-style {
+  padding: 30px;
+  border: 2px solid var(--color-3);
+  width: 100%;
+  font-size: 1rem;
+    color: #999;
+
+  background-color: var(--color-black);
   border-radius: 4px;
 }
 
