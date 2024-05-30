@@ -11,7 +11,7 @@ font-family: 'Permanent Marker', cursive;
 font-family: 'Poppins', sans-serif; 
 */
 :root {
-  --color-primary: #ffdc58;
+  --color-primary: #ffa224;
   --color-1: #ff2024;
   --color-2: #116208;
   --color-3: #ffa224;
@@ -643,7 +643,10 @@ hr.solid-sml {
   z-index: 9992;
   color: white;
 }
-
+.floatingchat-container-wrap {
+  bottom: 3%  !important;
+  left: 3%  !important;
+}
 /* Cookies */
 .btn-cockie {
   background-color: var(--color-3);

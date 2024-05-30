@@ -45,6 +45,8 @@ window.addEventListener("scroll", function () {
 // Button To Top - Right
 let btnToTop = document.querySelector(".btn-to-top");
 let socialFloat = document.querySelector(".float-sm");
+let kofi = document.querySelector(".floatingchat-container-wrap");
+
 
 // Scroll Function 
 window.onscroll = function () {
@@ -56,9 +58,11 @@ function scrollFunction() {
     document.documentElement.scrollTop > 677
   ) {
     btnToTop.style.display = "block";
+    kofi.style.display = "block";
     socialFloat.style.display = "none";
   } else {
     btnToTop.style.display = "none";
+    kofi.style.display = "none";
     socialFloat.style.display = "block";
   }
 }
