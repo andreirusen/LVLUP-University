@@ -644,6 +644,7 @@ hr.solid-sml {
   color: white;
 }
 .floatingchat-container-wrap {
+  z-index: 9992 !important;
   bottom: 3%  !important;
   left: 3%  !important;
 }
