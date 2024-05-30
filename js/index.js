@@ -45,8 +45,8 @@ window.addEventListener("scroll", function () {
 // Button To Top - Right
 let btnToTop = document.querySelector(".btn-to-top");
 let socialFloat = document.querySelector(".float-sm");
-let kofi = document.querySelector(".floatingchat-container-wrap");
-
+let kofi = document.querySelector(".floatingchat-container-wrap"); 
+let kofiMobile = document.querySelector(".floatingchat-container-mobi");
 
 // Scroll Function 
 window.onscroll = function () {
@@ -59,10 +59,14 @@ function scrollFunction() {
   ) {
     btnToTop.style.display = "block";
     kofi.style.display = "block";
+    kofiMobile.style.display = "block";
+
     socialFloat.style.display = "none";
   } else {
     btnToTop.style.display = "none";
     kofi.style.display = "none";
+    kofiMobile.style.display = "none";
+
     socialFloat.style.display = "block";
   }
 }

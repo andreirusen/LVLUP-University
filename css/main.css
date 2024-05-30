@@ -648,6 +648,7 @@ hr.solid-sml {
   bottom: 3%  !important;
   left: 3%  !important;
 }
+
 /* Cookies */
 .btn-cockie {
   background-color: var(--color-3);
@@ -837,6 +838,9 @@ hr.solid-sml {
 
   .header-typed {
     font-size: 6vw;
+  }
+  .floatingchat-container-wrap {
+    display: none !important;
   }
 
   hr.solid {
