@@ -638,7 +638,7 @@ hr.solid-sml {
 /* Buttons */
 .btn-to-top {
   position: fixed;
-  bottom: 5%;
+  bottom: 2%;
   right: 3%;
   z-index: 98;
   color: white;
@@ -819,8 +819,8 @@ hr.solid-sml {
 @media (max-width: 769px) {
   .btn-to-top {
     position: fixed;
-    bottom: 5%;
-    right: 5%;
+    bottom: 2%;
+    right: 6%;
     z-index: 9;
   }
 
