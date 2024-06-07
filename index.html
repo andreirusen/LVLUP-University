@@ -1,170 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Head -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Head -->
 
-    <link rel="icon" href="/assets/logo/LVLUP-Title.png" type="LVLUP-Title" />
-    <title>LVLUP University</title>
-    <meta name="description" content="LVLUP University" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
+  <link rel="icon" href="/assets/logo/LVLUP-Title.png" type="LVLUP-Title" />
+  <title>LVLUP University</title>
+  <meta name="description" content="LVLUP University" />
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      href="https://db.onlinewebfonts.com/c/ac9d8158b3517faaa24ecd1ca8a4e001?family=Kulturista"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://kit.fontawesome.com/af8da007ac.css"
-      crossorigin="anonymous"
-    />
-    <!-- Map Script -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script>
-      ((g) => {
-        var h,
-          a,
-          k,
-          p = "The Google Maps JavaScript API",
-          c = "google",
-          l = "importLibrary",
-          q = "__ib__",
-          m = document,
-          b = window;
-        b = b[c] || (b[c] = {});
-        var d = b.maps || (b.maps = {}),
-          r = new Set(),
-          e = new URLSearchParams(),
-          u = () =>
-            h ||
-            (h = new Promise(async (f, n) => {
-              await (a = m.createElement("script"));
-              e.set("libraries", [...r] + "");
-              for (k in g)
-                e.set(
-                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
-                  g[k]
-                );
-              e.set("callback", c + ".maps." + q);
-              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
-              d[q] = f;
-              a.onerror = () => (h = n(Error(p + " could not load.")));
-              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-              m.head.append(a);
-            }));
-        d[l]
-          ? console.warn(p + " only loads once. Ignoring:", g)
-          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
-      })({ key: "AIzaSyC_s-dLS1bgs-qXCqLDdGoBJne4ox4sxbw", v: "weekly" });
-    </script>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://db.onlinewebfonts.com/c/ac9d8158b3517faaa24ecd1ca8a4e001?family=Kulturista" rel="stylesheet" />
 
-    <!-- Confetti -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://kit.fontawesome.com/af8da007ac.css" crossorigin="anonymous" />
+  <!-- Map Script -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script>
+    ((g) => {
+      var h,
+        a,
+        k,
+        p = "The Google Maps JavaScript API",
+        c = "google",
+        l = "importLibrary",
+        q = "__ib__",
+        m = document,
+        b = window;
+      b = b[c] || (b[c] = {});
+      var d = b.maps || (b.maps = {}),
+        r = new Set(),
+        e = new URLSearchParams(),
+        u = () =>
+          h ||
+          (h = new Promise(async (f, n) => {
+            await (a = m.createElement("script"));
+            e.set("libraries", [...r] + "");
+            for (k in g)
+              e.set(
+                k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                g[k]
+              );
+            e.set("callback", c + ".maps." + q);
+            a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+            d[q] = f;
+            a.onerror = () => (h = n(Error(p + " could not load.")));
+            a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+            m.head.append(a);
+          }));
+      d[l]
+        ? console.warn(p + " only loads once. Ignoring:", g)
+        : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+    })({ key: "AIzaSyC_s-dLS1bgs-qXCqLDdGoBJne4ox4sxbw", v: "weekly" });
+  </script>
 
-    <!-- Swipper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/carousel.css" />
-    <link rel="stylesheet" href="/css/cards.css" />
+  <!-- Swipper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-    
-  </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/carousel.css" />
+  <link rel="stylesheet" href="/css/cards.css" />
 
-  <!-- Body -->
-  <body class="container-fluid px-0 py-0" id="home">
-    <!-- Loading -->
-    <!-- <div id="preloader" class=""></div> -->
 
-    <!-- Navbar  -->
-    <nav class="container-fluid navbar navbar-fitness navbar-expand-lg py-2">
-      <div class="container">
-        <!-- logo -->
-        <div class="col-lg-1d d-lg-none">
-          <a href="/index.html" class="navbar-brand">
-            <img
-              class="icon-logo-fitness transform-scale-md"
-              src="/Assets/logo/LVLUP.png"
-              alt="LOGO"
-            />
-          </a>
-        </div>
+</head>
 
-        <!-- Phone Hamburger -->
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main_nav"
-        >
-          <span class="toggler-icon top-bar"></span>
-          <span class="toggler-icon middle-bar"></span>
-          <span class="toggler-icon bottom-bar"></span>
-        </button>
+<!-- Body -->
 
-        <!-- Nav Bar -->
-        <div class="col collapse navbar-collapse" id="main_nav">
-          <ul
-            class="text-center navbar-nav fw-bold container justify-content-around nav-pills"
-          >
-            <!-- ACASA -->
-            <li class="nav-item hover-underline-animation">
-              <a
-                href="#home"
-                class="nav-link"
-                aria-current="page"
-                onclick="closeNavbar()"
-                >ACASA</a
-              >
-            </li>
-            <!-- DESPRE -->
-            <li class="nav-item hover-underline-animation">
-              <a
-                href="#despre"
-                class="nav-link"
-                aria-current="page"
-                onclick="closeNavbar()"
-                >DESPRE</a
-              >
-            </li>
-            <!-- ABONAMENT -->
-            <li class="nav-item dropdown hover-underline-animation">
-              <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
-              <a
-                href="#abonament"
-                class="nav-link dropdown"
-                aria-expanded="false"
-                aria-current="page"
-                onclick="closeNavbar()"
-                >ABONAMENT</a
-              >
-              <!-- <ul class="dropdown-menu text-center container-dropdown">
+<body class="container-fluid px-0 py-0" id="home">
+  <!-- Loading -->
+  <!-- <div id="preloader" class=""></div> -->
+
+  <!-- Navbar  -->
+  <nav class="container-fluid navbar navbar-fitness navbar-expand-lg py-2">
+    <div class="container">
+      <!-- logo -->
+      <div class="col-lg-1d d-lg-none">
+        <a href="/index.html" class="navbar-brand">
+          <img class="icon-logo-fitness transform-scale-md" src="/Assets/logo/LVLUP.png" alt="LOGO" />
+        </a>
+      </div>
+
+      <!-- Phone Hamburger -->
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+
+      <!-- Nav Bar -->
+      <div class="col collapse navbar-collapse" id="main_nav">
+        <ul class="text-center navbar-nav fw-bold container justify-content-around nav-pills">
+          <!-- ACASA -->
+          <li class="nav-item hover-underline-animation">
+            <a href="#home" class="nav-link" aria-current="page" onclick="closeNavbar()">ACASA</a>
+          </li>
+          <!-- DESPRE -->
+          <li class="nav-item hover-underline-animation">
+            <a href="#despre" class="nav-link" aria-current="page" onclick="closeNavbar()">DESPRE</a>
+          </li>
+          <!-- ABONAMENT -->
+          <li class="nav-item dropdown hover-underline-animation">
+            <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
+            <a href="#abonament" class="nav-link dropdown" aria-expanded="false" aria-current="page"
+              onclick="closeNavbar()">ABONAMENT</a>
+            <!-- <ul class="dropdown-menu text-center container-dropdown">
                 <li>
                   <a
                     class="dropdown-item bg-dropdown-1 fw-semibold"
@@ -192,225 +145,240 @@
                   >
                 </li>
               </ul> -->
-            </li>
-            <!-- logo -->
-            <li class="nav-item d-none d-lg-block">
-              <a href="/index.html">
-                <img
-                  class="icon-logo-fitness transform-scale-md"
-                  src="/Assets/logo/LVLUP.png"
-                  alt="LOGO"
-                />
-              </a>
-            </li>
-            <!-- LOCATIE -->
-            <li class="nav-item hover-underline-animation">
-              <a
-                href="#locatie"
-                class="nav-link"
-                aria-current="page"
-                onclick="closeNavbar()"
-                >LOCATIE</a
-              >
-            </li>
-            <!-- CONTACT -->
-            <li class="nav-item hover-underline-animation">
-              <a
-                href="#contact"
-                class="nav-link"
-                aria-current="page"
-                onclick="closeNavbar()"
-                >CONTACT</a
-              >
-            </li>
+          </li>
+          <!-- logo -->
+          <li class="nav-item d-none d-lg-block">
+            <a href="/index.html">
+              <img class="icon-logo-fitness transform-scale-md" src="/Assets/logo/LVLUP.png" alt="LOGO" />
+            </a>
+          </li>
+          <!-- LOCATIE -->
+          <li class="nav-item hover-underline-animation">
+            <a href="#locatie" class="nav-link" aria-current="page" onclick="closeNavbar()">LOCATIE</a>
+          </li>
+          <!-- CONTACT -->
+          <li class="nav-item hover-underline-animation">
+            <a href="#contact" class="nav-link" aria-current="page" onclick="closeNavbar()">CONTACT</a>
+          </li>
 
-            <!-- PROGRAM -->
-            <li class="nav-item hover-underline-animation">
-              <a
-                href="#program"
-                class="nav-link"
-                aria-current="page"
-                onclick="closeNavbar()"
-                >PROGRAM</a
-              >
-            </li>
-          </ul>
-        </div>
+          <!-- PROGRAM -->
+          <li class="nav-item hover-underline-animation">
+            <a href="#program" class="nav-link" aria-current="page" onclick="closeNavbar()">PROGRAM</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Showcase / Carousel -->
-    <div class="wrapper interactive-section-two">
-      <!-- Interactive Program Section -->
-      <section class="interactive-section-one">
-        <!-- Carousel -->
-        <div
-          id="carouselExampleSlidesOnly"
-          class="carousel slide carousel-containe"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <!-- 1 -->
-            <div class="carousel-item active">
-              <img src="/Assets/home/1.jpg" class="carousel-img" alt="..." />
-            </div>
-            <!-- 2 -->
-            <div class="carousel-item">
-              <img src="/Assets/home/2.jpg" class="carousel-img" alt="..." />
-            </div>
-            <!-- 3 -->
-            <div class="carousel-item">
-              <img src="/Assets/home/3.jpg" class="carousel-img" alt="..." />
-            </div>
-            <!-- 3 -->
-            <div class="carousel-item">
-              <img src="/Assets/home/4.jpg" class="carousel-img" alt="..." />
-            </div>
+  <!-- Showcase / Carousel -->
+  <div class="wrapper interactive-section-two">
+    <!-- Interactive Program Section -->
+    <section class="interactive-section-one">
+      <!-- Carousel -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-containe" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- 1 -->
+          <div class="carousel-item active">
+            <img src="/Assets/home/1.jpg" class="carousel-img" alt="..." />
+          </div>
+          <!-- 2 -->
+          <div class="carousel-item">
+            <img src="/Assets/home/2.jpg" class="carousel-img" alt="..." />
+          </div>
+          <!-- 3 -->
+          <div class="carousel-item">
+            <img src="/Assets/home/3.jpg" class="carousel-img" alt="..." />
+          </div>
+          <!-- 3 -->
+          <div class="carousel-item">
+            <img src="/Assets/home/4.jpg" class="carousel-img" alt="..." />
           </div>
         </div>
+      </div>
 
-        <!-- Text / Button -->
-        <div class="showcase-section m-5">
-          <!-- Title -->
-          <h1 class="header-text text-center" id="header-showcase">
-            No Risk,
+      <!-- Text / Button -->
+      <div class="showcase-section m-5">
+        <!-- Title -->
+        <h1 class="header-text text-center" id="header-showcase">
+          No Risk,
+          <br />
+          No Story!
+        </h1>
+
+        <!-- Button -->
+        <button class="btn-showcase btn primary-bg btn-lg grow-and-shrink" type="button">
+          <a class="begin-btn fw-semibold" href="#abonament">INCEPE ACUM</a>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Despre + Carousel-->
+  <main class="bg-black py-5" id="despre">
+    <div class="container">
+      <!-- Title -->
+      <div class="reveal">
+        <h1 class="text-center h-text m-5">Despre</h1>
+      </div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="container">
+          <span class="text-wrap text-white text-justify align-self-center">
+            <p class="text-size-md reveal">
+              Bine ai venit la
+              <span class="primary-color fw-bold">LVLUP University</span>!
+            </p>
             <br />
-            No Story!
-          </h1>
+            <p class="text-size-md reveal">
+              Investește într-un
+              <span class="primary-color fw-bold">stil de viață sănătos</span>
+              și echilibrat, indiferent de vârstă! Descoperă avantajele
+              abonamentului nostru lunar pentru a-ți atinge obiectivele și a
+              te simți în formă maximă! <br />
+              Indiferent de nivelul tău de pregătire, vrem să te ghidăm în
+              călătoria ta către o viață mai activă și echilibrată. Cu pasiune
+              și dedicare, te vom sprijini să îți atingi obiectivele de
+              fitness. Fiecare moment petrecut în sala de fitness este o
+              oportunitate de a deveni mai puternic și mai sănătos. Alături de
+              antrenorii noștri experimentați, vei învăța cum să îți
+              optimizezi alimentația pentru a susține obiectivele tale de
+              fitness. Fii parte din comunitatea noastră dedicată sănătății și
+              progresului.
+            </p>
 
-          <!-- Button -->
-          <button
-            class="btn-showcase btn primary-bg btn-lg grow-and-shrink"
-            type="button"
-          >
-            <a class="begin-btn fw-semibold" href="#abonament">INCEPE ACUM</a>
-          </button>
+            <p class="text-size-md reveal">
+              Bun venit în comunitatea noastră, locul unde ești mai aproape de
+              obiectivul tău.
+            </p>
+            <p class="text-size-md reveal">
+              Suntem aici să te susținem în fiecare etapă a acestei călătorii
+              pentru a deveni
+              <span class="primary-color fw-bold">cea mai bună versiune a ta</span>!
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ABONAMENTUL LVLUP -->
+  <section class="container p-1 p-sm-2 p-md-4 p-lg-5" id="abonament">
+    <!-- Title + Carousel + Continut-->
+    <div class="container">
+      <!-- Titlu  -->
+      <h1 class="text-center h-text my-5 reveal">ABONAMENTUL LVLUP</h1>
+      <br />
+
+      <!-- Intro -->
+      <span class="text-wrap text-white align-self-center my-5">
+        <p class="text-size-md reveal text-justify">
+          🏋️‍♀️
+          <span class="primary-color fw-bold">Programul LVLUP</span>
+          este structurat pe mai multe nivele, acestea fiind separate în
+          funcție de progresul lunar al fiecărui participant în program.
+          <br>
+          <br> Toți clienții vor începe de la
+          <span class="primary-color fw-bold">Nivelul 1</span>, avansând la următorul nivel în funcție de progresul și
+          realizările lor.
+          <br>
+          <br>
+          Fiecare nivel include acces la aplicații dedicate pentru monitorizarea nutriției
+          și antrenamentelor online, oferind un suport complet pentru atingerea obiectivelor personale.
+          <br>
+          <br>
+          Nivelele sunt catalogate ca grade de dificultate, aducând beneficii semnificative în dezvoltarea fizică și
+          performanța clienților.
+
+
+        </p>
+      </span>
+
+      <!-- Carousel  -->
+      <section class="section-cards reveal my-md-5">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide--one">
+              <div class="text-center d-none">
+                <a href="#contact">LEVEL 1</a>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide--two">
+              <div class="text-center d-none">
+                <a href="#contact">LEVEL 2</a>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide--three">
+              <div class="text-center d-none">
+                <a href="#contact">LEVEL 3</a>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide--four">
+              <div class="text-center d-none">
+                <a href="#contact">LEVEL 1</a>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide--five">
+              <div class="text-center d-none">
+                <a href="#contact">LEVEL 2</a>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide--six">
+              <div class="text-center d-none">
+                <a href="#contact">LEVEL 3</a>
+              </div>
+            </div>
+          </div>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next  d-none d-lg-block"></div>
+          <div class="swiper-button-prev d-none d-lg-block"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
-    </div>
 
-    <!-- Despre + Carousel-->
-    <main class="bg-black py-5" id="despre">
-      <div class="container">
-        <!-- Title -->
-        <div class="reveal">
-          <h1 class="text-center h-text m-5">Despre</h1>
-        </div>
+      <!-- Continut TEXT -->
+      <span class="text-wrap text-white align-self-center my-5">
 
-        <!-- Content -->
-        <div class="container">
-          <div class="container">
-            <span class="text-wrap text-white text-justify align-self-center">
-              <p class="text-size-md reveal">
-                Bine ai venit la
-                <span class="primary-color fw-bold">LVLUP University</span>!
-              </p>
-              <br />
-              <p class="text-size-md reveal">
-                Investește într-un
-                <span class="primary-color fw-bold">stil de viață sănătos</span>
-                și echilibrat, indiferent de vârstă! Descoperă avantajele
-                abonamentului nostru lunar pentru a-ți atinge obiectivele și a
-                te simți în formă maximă! <br />
-                Indiferent de nivelul tău de pregătire, vrem să te ghidăm în
-                călătoria ta către o viață mai activă și echilibrată. Cu pasiune
-                și dedicare, te vom sprijini să îți atingi obiectivele de
-                fitness. Fiecare moment petrecut în sala de fitness este o
-                oportunitate de a deveni mai puternic și mai sănătos. Alături de
-                antrenorii noștri experimentați, vei învăța cum să îți
-                optimizezi alimentația pentru a susține obiectivele tale de
-                fitness. Fii parte din comunitatea noastră dedicată sănătății și
-                progresului.
-              </p>
-
-              <p class="text-size-md reveal">
-                Bun venit în comunitatea noastră, locul unde ești mai aproape de
-                obiectivul tău.
-              </p>
-              <p class="text-size-md reveal">
-                Suntem aici să te susținem în fiecare etapă a acestei călătorii
-                pentru a deveni
-                <span class="primary-color fw-bold"
-                  >cea mai bună versiune a ta</span
-                >!
-              </p>
-            </span>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- ABONAMENTUL LVLUP -->
-    <section class="container p-1 p-sm-2 p-md-4 p-lg-5" id="abonament">
-      <!-- Title + Carousel + Continut-->
-      <div class="container">
-        <!-- Titlu  -->
-        <h1 class="text-center h-text my-5 reveal">ABONAMENTUL LVLUP</h1>
+        <!-- Nivelul 1 -->
+        <p class="text-size-md reveal ">
+          🔸<span class="primary-color fw-bold">NIVELUL 1</span> : Corectarea posturii și îmbunătățirea
+          mobilității, coordonării și mersului.
+          <br>
+          Ideal pentru cei care doresc să își corecteze postura și să își îmbunătățească mobilitatea
+          generală. Antrenamentele se concentrează pe exerciții care ajută la alinierea corectă a corpului și la
+          creșterea flexibilității și coordonării. Include 8 antrenamente fizice, 8 antrenamente online și plan
+          nutrițional personalizat, monitorizat zilnic prin aplicațiile Eat and Track și Everfit.
+        </p>
         <br />
 
-        <!-- Intro -->
-        <span class="text-wrap text-white align-self-center my-5">
-          <p class="text-size-md reveal text-justify">
-            🏋️‍♀️
-            <span class="primary-color fw-bold">Programul LVLUP</span>
-            este structurat pe mai multe nivele, acestea fiind separate în
-            funcție de progresul lunar al fiecărui participant în program. Toți
-            clienții vor începe de la
-            <span class="primary-color fw-bold">Nivelul 1</span>, urmând ca după
-            o perioadă de 3 luni (adică 3 abonamente lunare), clientul să
-            avanseze la următorul nivel (respectiv
-            <span class="primary-color fw-bold">Nivelul 2</span>). Aceste nivele
-            sunt concepute astfel încât fiecare client să dobândească o fundație
-            solidă în ceea ce privește execuția corectă a mișcărilor, până la
-            posibilitatea de a-și atinge obiectivele dorite sau chiar
-            performanța, pentru cei care își doresc acest lucru.
-            <br />
-            Nivelele sunt catalogate ca grade de dificultate, care în același
-            timp aduc beneficii clientului în progresul său.
-          </p>
-        </span>
+        <!-- Nivelul 2 -->
+        <p class="text-size-md reveal ">
+          🔸<span class="primary-color fw-bold">NIVELUL 2</span> : Creșterea masei musculare și îmbunătățirea
+          tehnicii de mișcare pentru sportivii amatori.
+          <br>
+          Destinat sportivilor amatori și celor care doresc să își dezvolte masa musculară. Antrenamentele
+          includ exerciții specifice pentru hipertrofie și tehnici avansate de mișcare, pentru a maximiza rezultatele și
+          a preveni accidentările. Include 8 antrenamente fizice, 8 antrenamente online și plan nutrițional
+          personalizat, monitorizat zilnic prin aplicațiile Eat and Track și Everfit.
+        </p>
+        <br />
 
-        <!-- Carousel  -->
-        <section class="section-cards reveal my-md-5">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide swiper-slide--one">
-                <div class="text-center">
-                  <a href="#contact">3 Months</a>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide--two">
-                <div class="text-center">
-                  <a href="#contact">6 Months</a>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide--three">
-                <div class="text-center">
-                  <a href="#contact">12 Months</a>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide--four">
-                <div class="text-center">
-                  <a href="#contact">18 Months</a>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide--five">
-                <div class="text-center">
-                  <a href="#contact">24 Months</a>
-                </div>
-              </div>
-            </div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next  d-none d-lg-block"></div>
-            <div class="swiper-button-prev d-none d-lg-block"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </section>
+        <!-- Nivelul 3 -->
+        <p class="text-size-md reveal ">
+          🔸<span class="primary-color fw-bold">NIVELUL 3</span> : Performanță sportivă avansată, inclusiv
+          hipertrofie, explozie, mobilitate și recuperare.
+          <br>
+          Acest nivel este destinat sportivilor de performanță care doresc să își optimizeze performanța prin
+          antrenamente intense și specializate. Programul combină antrenamente specifice sportului practicat cu
+          exerciții generale pentru o dezvoltare completă și echilibrată. Include 8 antrenamente fizice, 8 antrenamente
+          online și plan nutrițional personalizat, monitorizat zilnic prin aplicațiile Eat and Track și Everfit.
+        </p>
 
-        <!-- Continut TEXT -->
-        <span class="text-wrap text-white align-self-center my-5">
+
+        <!-- LEVELE VECHI -->
+        <div class="d-none">
           <!-- Nivelul 1 -->
-          <p class="text-size-md reveal">
+          <p class="text-size-md reveal d-none">
             🔸<span class="primary-color fw-bold">NIVELUL 1</span> : constă în 8
             sesiuni de antrenament fizice și 8 sesiuni de antrenament online. Aceste sesiuni sunt dedicate învățării
             execuției corecte a mișcărilor și a utilizării echipamentelor
@@ -420,7 +388,7 @@
           <br />
 
           <!-- Nivelul 2 -->
-          <p class="text-size-md reveal">
+          <p class="text-size-md reveal d-none">
             🔸<span class="primary-color fw-bold">NIVELUL 2</span> : include un
             PLAN DE NUTRIȚIE PERSONALIZAT lunar. (pentru avansarea la următorul
             nivel, este necesară o prezență de cel puțin 6 luni în cadrul
@@ -429,7 +397,7 @@
           <br />
 
           <!-- Nivelul 3 -->
-          <p class="text-size-md reveal">
+          <p class="text-size-md reveal d-none">
             🔸<span class="primary-color fw-bold">NIVELUL 3</span> : oferă un
             TRICOU GRATUIT și acces la Comunitatea Privată LVLUP. Aici veți găsi
             informații gratuite despre nutriție și fitness, actualizate zilnic.
@@ -439,7 +407,7 @@
           <br />
 
           <!-- Nivelul 4 -->
-          <p class="text-size-md reveal">
+          <p class="text-size-md reveal d-none">
             🔸<span class="primary-color fw-bold">NIVELUL 4</span> : oferă acces
             nelimitat la ANTRENAMENTE ONLINE. (pentru avansarea la următorul
             nivel, este necesară o prezență de cel puțin 18 luni în cadrul
@@ -448,1013 +416,765 @@
           <br />
 
           <!-- Nivelul 5 -->
-          <p class="text-size-md reveal">
+          <p class="text-size-md reveal d-none">
             🔸<span class="primary-color fw-bold">NIVELUL 5</span> : te
             transformi într-unul dintre noi! (pentru avansarea la următorul
             nivel, este necesară o prezență de cel puțin 24 luni în cadrul
             programului!)
           </p>
-          <br />
-          <p class="text-size-md reveal text-justify">
-            Alege să te alături echipei noastre și
-            <span class="primary-color fw-bold">transformă-ți viața!</span>💪
-            <br />
-            <p class="text-size-md reveal text-justify d-none">
-              Nu amâna, începe călătoria ta spre un corp sănătos și o minte
-              echilibrată chiar astăzi cu abonamentul nostru lunar de fitness și
-              nutriție!
-            </p>
-           
-          </p>
-        </span>
-      </div>
+        </div>
 
-      <!-- Sectiune Aboanament -->
-      <div class="wrapper-pricing-tables reveal my-5">
-        <!-- ABONAMENT 1 LUNA -->
-        <div class="table basic reveal">
-          <div class="price-section">
-            <div class="price-area">
-              <div class="inner-area">
-                <span class="text">RON</span>
-                <span class="price">450</span>
-              </div>
+        <br />
+        <p class="text-size-md reveal text-justify">
+          Alege să te alături echipei noastre și
+          <span class="primary-color fw-bold">transformă-ți viața!</span>💪
+          <br />
+        <p class="text-size-md reveal text-justify d-none">
+          Nu amâna, începe călătoria ta spre un corp sănătos și o minte
+          echilibrată chiar astăzi cu abonamentul nostru lunar de fitness și
+          nutriție!
+        </p>
+
+        </p>
+      </span>
+    </div>
+
+
+    <!-- Sectiune Aboanament -->
+    <div class="wrapper-pricing-tables reveal my-5">
+      <!-- ABONAMENT LEVEL 1 -->
+      <div class="table basic reveal">
+        <div class="price-section">
+          <div class="price-area">
+            <div class="inner-area">
+              <span class="text">RON</span>
+              <span class="price"> 199</span>
             </div>
-          </div>
-          <div class="package-name"></div>
-          <ul class="features">
-            <li>
-              <span class="list-name">Incepe de la NIVELUL 1</span>
-              <span class="icon check"><i class="fas fa-check"></i></span>
-            </li>
-            <li>
-              <span class="list-name"
-                >Pregătește-te de schimbarea pe care o așteptai și incepe noul
-                tău stil de viață.</span
-              >
-            </li>
-          </ul>
-          <div class="btn">
-            <button><a href="#contact" class="a-button">Contact Us</a></button>
           </div>
         </div>
-        <!-- ABONAMENT 3 luni -->
-        <div class="table premium reveal">
-          <div class="ribbon"><span>Recomandat</span></div>
-          <div class="price-section">
-            <div class="price-area">
-              <div class="inner-area">
-                <span class="text">RON</span>
-                <span class="price">1,200</span>
-              </div>
+        <div class="package-name"></div>
+        <ul class="features">
+          <li>
+            <span class="list-name fw-bold">ACCES COMUNITATE <span class="primary-color">24/24</span></span>
+            <span class="icon check"><i class="fas fa-check"></i></span>
+          </li>
+          <li>
+            <span class="list-name fw-bold">+ 8 ANTRENAMENTE FIZICE</span>
+            <span class="icon check"><i class="fas fa-check"></i></span>
+          </li>
+          <li>
+            <span class="list-name">
+              - Corectarea posturii
+              <br>
+              - Îmbunătățirea mobilității
+              <br>
+              - Îmbunătățirea coordonării
+            </span>
+          </li>
+          <li>
+            <p class="fw-bold text-center"><span class="primary-color">Recomandat</span><br>Începători</p>
+          </li>
+        </ul>
+        <div class="btn">
+          <button><a href="#contact" class="a-button">Contact Us</a></button>
+        </div>
+      </div>
+      <!-- ABONAMENT LEVEL 2 -->
+      <div class="table premium reveal">
+        <div class="ribbon"><span>Recomandat</span></div>
+        <div class="price-section">
+          <div class="price-area">
+            <div class="inner-area">
+              <span class="text">RON</span>
+              <span class="price">299</span>
             </div>
-          </div>
-          <div class="package-name"></div>
-          <ul class="features">
-            <li>
-              <span class="list-name">Incepe de la NIVELUL 2</span>
-              <span class="icon check"><i class="fas fa-check"></i></span>
-            </li>
-            <li>
-              <span class="list-name"
-                >Mai ai 3 abonamente pana la NIVELUL 3</span
-              >
-            </li>
-          </ul>
-          <div class="btn">
-            <button><a href="#contact" class="a-button">Contact Us</a></button>
           </div>
         </div>
-        <!-- ABONAMENT 6 luni -->
-        <div class="table ultimate reveal">
-          <div class="price-section">
-            <div class="price-area">
-              <div class="inner-area">
-                <span class="text">RON</span>
-                <span class="price">2,100</span>
-              </div>
+        <div class="package-name"></div>
+        <ul class="features">
+          <li>
+            <span class="list-name fw-bold">BENEFICII <span class="primary-color">LEVEL 1</span></span>
+            <span class="icon check"><i class="fas fa-check"></i></span>
+          </li>
+          <li>
+            <span class="list-name fw-bold">+ 8 ANTRENAMENTE ONLINE</span>
+            <span class="icon check"><i class="fas fa-check"></i></span>
+          </li>
+          <li>
+            <span class="list-name">
+              - Dezvoltarea fortei generale
+              <br>
+              - Îmbunătățirea tehnicii generale
+              <br>
+              - Prevenirea accidentarilor
+            </span>
+          </li>
+          <li>
+            <p class="fw-bold text-center"><span class="primary-color">Recomandat</span><br>Avansați</p>
+          </li>
+        </ul>
+        <div class="btn">
+          <button><a href="#contact" class="a-button">Contact Us</a></button>
+        </div>
+      </div>
+      <!-- ABONAMENT LEVEL 3 -->
+      <div class="table ultimate reveal">
+        <div class="price-section">
+          <div class="price-area">
+            <div class="inner-area">
+              <span class="text">RON</span>
+              <span class="price">399</span>
             </div>
           </div>
-          <div class="package-name"></div>
-          <ul class="features">
-            <li>
-              <span class="list-name">Incepe de la NIVELUL 3</span>
-              <span class="icon check"><i class="fas fa-check"></i></span>
-            </li>
-            <li>
-              <span class="list-name"
-                >Mai ai 6 abonamente pana la NIVELUL 4</span
-              >
-            </li>
-            <!-- <li>
+        </div>
+        <div class="package-name"></div>
+        <ul class="features">
+          <li>
+            <span class="list-name fw-bold">BENEFICII <span class="primary-color">LEVEL 2</span></span>
+            <span class="icon check"><i class="fas fa-check"></i></span>
+          </li>
+          <li>
+            <span class="list-name fw-bold">+ PLAN PERSONALIZAT DE NUTRITIE</span>
+            <span class="icon check"><i class="fas fa-check"></i></span>
+          </li>
+          <li>
+            <span class="list-name">
+              - Dezvoltarea fortei specifice
+              <br>
+              - Îmbunătățirea tehnicii specifice
+              <br>
+              - Streching activ + pasiv
+
+          </li>
+          <li>
+            <p class="fw-bold text-center"><span class="primary-color">Recomandat</span><br>Performanța</p>
+          </li>
+          <!-- <li>
              <span class="icon check"><i class="fas fa-check"></i></span>
               <span class="icon check"><i class="fas fa-check"></i></span>
             </li> -->
-          </ul>
-          <div class="btn">
-            <button><a href="#contact" class="a-button">Contact Us</a></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Detalii ABONAMENT -->
-      <div
-        class="text-size-md reveal text-wrap text-white text-justify align-self-center my-5 container"
-      >
-        <p class="reveal">
-          * In cazul recomandarilor de catre un alt client, vei beneficia de
-          <span class="primary-color fw-bold">prima ședință gratuită</span>.
-        </p>
-        <br />
-        <p class="reveal">
-          * Nivelul de pregătire va fi hotarât la ședință gratuită.
-        </p>
-        <br />
-        <p class="reveal">
-          * Antrenamentele în
-          <span class="primary-color fw-bold">grup</span> necesită cel puțin
-          <span class="primary-color fw-bold"> două persoane</span> de același
-          nivel sau cu obiectiv asemănător.
-        </p>
-      </div>
-
-
-      <!-- Cel Vechi -->
-      <!-- Tabel ABONAMENT -->
-      <div class="my-5 table-container reveal d-none">
-        <table class="table text-white">
-          <thead>
-            <tr class="text-center">
-              <th scope="col">Tip</th>
-              <th scope="col">Nr. Sedinte</th>
-              <th scope="col">Durata</th>
-              <th scope="col">Pret Vechi</th>
-              <th scope="col">
-                <span class="text-uppercase font-marker">Pret Nou</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="table-group-divider">
-            <!-- Grup -->
-            <tr class="text-center">
-              <th scope="row">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-users-group"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
-                  <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
-                  <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
-                </svg>
-                <br />
-                Grup
-              </th>
-              <td>4</td>
-              <td>30 Zile</td>
-              <td class="text-decoration-line-through">300 RON</td>
-              <td class="fw-bold primary-color">199 RON</td>
-            </tr>
-            <tr class="text-center">
-              <th scope="row">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-users-group"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
-                  <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
-                  <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
-                </svg>
-                <br />
-                Grup
-              </th>
-              <td>8</td>
-              <td>30 Zile</td>
-              <td class="text-decoration-line-through">500 RON</td>
-              <td class="fw-bold primary-color">399 RON</td>
-            </tr>
-            <!-- Individual -->
-            <tr class="text-center">
-              <th scope="row">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-user"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-                </svg>
-                <br />
-                Individual
-              </th>
-              <td>4</td>
-              <td>30 Zile</td>
-              <td class="text-decoration-line-through">400 RON</td>
-              <td class="fw-bold primary-color">299 RON</td>
-            </tr>
-            <tr class="text-center">
-              <th scope="row">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-user"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-                </svg>
-                <br />
-                Individual
-              </th>
-              <td>8</td>
-              <td>30 Zile</td>
-              <td class="text-decoration-line-through">600 RON</td>
-              <td class="fw-bold primary-color">499 RON</td>
-            </tr>
-            <!-- Online -->
-            <tr class="text-center" id="informatii-ABONAMENT">
-              <th scope="row">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-device-laptop"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M3 19l18 0"></path>
-                  <path
-                    d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"
-                  ></path>
-                </svg>
-                <br />
-                Online
-              </th>
-              <td>24/24</td>
-              <td>30 Zile</td>
-              <td class="text-decoration-line-through">500 RON</td>
-              <td class="fw-bold primary-color">249 RON</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  
-
-    <!-- Location Map -->
-    <div class="container bg-black p-1 p-sm-2 p-md-4 p-lg-5" id="locatie">
-      <!-- Text -->
-      <div class="container">
-        <!-- Titlu  -->
-        <h1 class="text-center h-text my-5 reveal">Locatie</h1>
-        <!-- Continut -->
-        <div class="row text-center">
-          <!-- Stay Fit Gym - Pantelimon -->
-          <div
-            class="col-md-6 text-wrap text-white align-self-center my-5 text-size-md reveal"
-          >
-            <p>
-              <span class="primary-color fw-bold">
-                Stay Fit Gym - Pantelimon
-              </span>
-            </p>
-            <p>
-              Stay Fit Gym - Pantelimon, Bulevardul Chișinău 1, București 022141
-            </p>
-            <div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11393.66290536572!2d26.1575!3d44.445146!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f92ff495235d%3A0xa67b9131c2d3d501!2sStay%20Fit%20Gym%20-%20Pantelimon!5e0!3m2!1sen!2sro!4v1704392822832!5m2!1sen!2sro"
-                style="width: 100%; height: 400px"
-                class="container bg-white box-border reveal"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-
-          <!-- Stay Fit Gym - Fizicienilor -->
-          <div
-            class="col-md-6 text-wrap text-white align-self-center my-5 text-size-md reveal"
-          >
-            <p>
-              <span class="primary-color fw-bold">
-                Stay Fit Gym - Fizicienilor
-              </span>
-            </p>
-            <p>
-              Stay Fit Gym - Fizicienilor, Strada Fizicienilor 1, București
-              077160
-            </p>
-            <div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.9934431918027!2d26.14757267650583!3d44.41278027107622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff1eed39824b%3A0xe65c8cbbce5487a8!2sStay%20Fit%20Gym%20-%20Fizicienilor!5e0!3m2!1sen!2sro!4v1704393038175!5m2!1sen!2sro"
-                style="width: 100%; height: 400px"
-                class="container bg-white box-border reveal"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
+        </ul>
+        <div class="btn">
+          <button><a href="#contact" class="a-button">Contact Us</a></button>
         </div>
       </div>
     </div>
 
-    <!-- Contact -->
-    <section class="container p-1 p-sm-2 p-md-4 p-lg-5" id="contact">
-      <!-- Title -->
-      <div class="text-center p-1 p-sm-2 p-md-4 p-lg-5 reveal mx-5">
-        <h2 class="h-text">Contact</h2>
-        <h4 class="text-light text-center text-size-md">
-          Pentru orice informatie nu ezitati sa ne contactati
-        </h4>
-      </div>
-      <!-- Form Section -->
-      <div class="container">
-        <div class="row">
-          <!-- Left Container -->
-          <div class="col-md-5 contact-container justify-content-start">
-            <div class="row reveal">
-              <h2 class="h-text">Social Media</h2>
-            </div>
-            <div class="row reveal">
-              <h4 class="text-light text-left text-size-lg">
-                <p class="my-5">
-                  <a
-                    href="tel:+40771810711"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-solid fa-phone"
-                      style="color: var(--color-3)"
-                    ></i>
-                    +40 771 810 710
-                  </a>
-                </p>
-                <p class="my-5">
-                  <a
-                    href="https://wa.me/0771810710"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-brands fa-whatsapp"
-                      style="color: var(--color-3)"
-                    ></i>
-                    +40 771 810 710
-                  </a>
-                </p>
-                <p class="my-5">
-                  <a
-                    href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-brands fa-facebook"
-                      style="color: var(--color-3)"
-                    ></i>
-                    LVLUP University
-                  </a>
-                </p>
-                <p class="my-5">
-                  <a
-                    href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr"
-                    target="_blank"
-                    class="social-color"
-                  >
-                    <i
-                      class="fa-brands fa-instagram"
-                      style="color: var(--color-3)"
-                    ></i>
-                    LVLUP University
-                  </a>
-                </p>
-                <p class="my-5 d-none">
-                  <i class="fa-brands fa-tiktok" style="color: #ffffff"></i>
-                  Cursuri_Inot_LVLUP
-                </p>
-              </h4>
-            </div>
-          </div>
+    <!-- Detalii ABONAMENT -->
+    <div class="text-size-md reveal text-wrap text-white text-justify align-self-center my-5 container">
+      <p class="reveal">
+        * In cazul recomandarilor de catre un alt client, vei beneficia de
+        <span class="primary-color fw-bold">prima ședință gratuită</span>.
+      </p>
+      <br />
+      <p class="reveal">
+        * Nivelul de pregătire va fi hotarât la <span class="primary-color fw-bold">ședință gratuită</span>.
+      </p>
+      <br />
+      <p class="reveal">
+        * Antrenamentele în
+        <span class="primary-color fw-bold">grup</span> necesită cel puțin
+        <span class="primary-color fw-bold"> două persoane</span> de același
+        nivel sau cu obiectiv asemănător.
+      </p>
+    </div>
 
-          <!-- Midle Container -->
-          <h2
-            class="col-md-2 contact-container text-center h-text d-none d-md-block reveal"
-          >
-            /
-          </h2>
 
-          <!-- Right Container -->
-          <div class="col-md-5 contact-container">
-            <div class="row reveal">
-              <h1 class="h-text">Email</h1>
-            </div>
-            <div class="row reveal">
-              <h4 class="text-center text-light"></h4>
-            </div>
-            <form
-              class="row form-container reveal wrapper-confetti"
-              action="https://formspree.io/f/xbjngayw"
-              method="POST"
-              name="contact-form"
-              accept-charset="utf-8"
-            >
-              <div class="col-xs-12">
-                <div class="col-xs-12">
-                  <select class="styled-input wide select-style fw-bold"  name="_optin" required>
-                    <option value="Nivel-1">Nivel 1</option>
-                    <option value="Nivel-2">Nivel 2</option>
-                    <option value="Nivel-3">Nivel 3</option>
-                  </select>
-                </div>
-                <div class="styled-input wide">
-                  <input type="text" name="name" required />
-                  <label>Nume</label>
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="styled-input wide">
-                  <input type="email" name="_replyto" required />
-                  <label>Email</label>
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="styled-input wide">
-                  <input type="text" name="number" required />
-                  <label>Numar Telefon</label>
-                </div>
-              </div>
-         
-              <div class="col-xs-12">
-                <div class="styled-input wide">
-                  <textarea name="message" id="message" required></textarea>
-                  <label>Mesaj</label>
-                </div>
-              </div>
-              <input
-                type="hidden"
-                name="_subject"
-                id="email-subject"
-                value="Survey Responses"
-              />
-              <button
-                class="col btn-submit btn btn-lg primary-bg fw-semibold confetti-button"
-                type="submit"
-                value="Contact Form Submission"
-              >
-                Trimite
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Rating -->
-    <section class="container" id="recenzii">
-      <!-- Rating Title  -->
-      <div class="container my-5">
-        <div class="header-content container reveal text-size-md">
-          <h1>
-            Experiența de <span class="color-primary-text">5 ani</span> în
-            domeniu
-          </h1>
-          <p class="text-justify">
-            Oferim doar
-            <span class="color-primary-text">servicii excelente</span>
-            pentru clienții noștri. Citeste mai jos ce au de spus clienții
-            despre serviciile noastre.
-          </p>
-        </div>
-      </div>
-      <!-- Rating Carousel -->
-      <div
-        id="carouselExampleAutoplaying"
-        class="carousel slide container reveal p-1 p-sm-2 p-md-4 p-lg-5"
-        data-bs-ride="carousel"
-      >
-        <!-- Cards -->
-        <div class="carousel-inner rating-container text-justify text-size-md">
-          <!-- Card 1 -->
-          <div class="carousel-item carousel-border p-3 active">
-            <div class="user-review">
-              <!-- User Details -->
-              <div class="user-details">
-                <img
-                  src="/Assets/ratings/image-alex.png"
-                  alt="User"
-                  style="width: 80px"
-                />
-                <div class="user-info">
-                  <h5>Alexandru Ghezea</h5>
-                  <span class="verified">Verified Buyer</span>
-                  <div class="stars">
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- User Message + Date -->
-              <p>
-                "L-am înscris pe fiul meu la ședințele cu Andrei pentru a-i
-                îmbunătăți încrederea și îndemânarea. Am fost impresionat de
-                progresele pe care le-a făcut în doar câteva săptămâni.
-                Antrenorul este atent și dedicat, iar metodele sale de învățare
-                sunt eficiente. Recomand cu încredere!"
-              </p>
-              <p class="rating-data">
-                Date: <span class="text-white">14/05/2023</span>
-              </p>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="carousel-item carousel-border p-3">
-            <div class="user-review">
-              <!-- User Details -->
-              <div class="user-details">
-                <img
-                  src="/Assets/ratings/image-irene.jpg"
-                  alt="User"
-                  style="width: 80px"
-                />
-                <div class="user-info">
-                  <h5>Georgiana Halbu</h5>
-                  <span class="verified">Verified Buyer</span>
-                  <div class="stars">
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- User Message + Date -->
-              <p>
-                "Sunt foarte mulțumită de progresele pe care le-am făcut alaturi
-                de Andrei. Este atent și dedicat, iar metodele sale de învățare
-                sunt eficiente și distractive. Recomand!"
-              </p>
-              <p class="rating-data">
-                Date: <span class="text-white">16/02/2023</span>
-              </p>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="carousel-item carousel-border p-3">
-            <div class="user-review">
-              <!-- User Details -->
-              <div class="user-details">
-                <img
-                  src="/Assets/ratings/image-anne.jpg"
-                  alt="User"
-                  style="width: 80px"
-                />
-                <div class="user-info">
-                  <h5>Ana-Maria Dimitrov</h5>
-                  <span class="verified">Verified Buyer</span>
-                  <div class="stars">
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- User Message + Date -->
-              <p>
-                "Am venit aici pe recomandarea unei prietene. Încă nu pot să
-                înțeleg câtă răbdare și pasiune oferă când vine vorba de
-                corectarea exercițiilor sau îmbunătățirea tehnicii."
-              </p>
-              <p class="rating-data">
-                Date: <span class="text-white">02/03/2023</span>
-              </p>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div class="carousel-item carousel-border p-3">
-            <div class="user-review">
-              <!-- User Details -->
-              <div class="user-details">
-                <img
-                  src="/Assets/ratings/image-george.jpg"
-                  alt="User"
-                  style="width: 80px"
-                />
-                <div class="user-info">
-                  <h5>George Nistor</h5>
-                  <span class="verified">Verified Buyer</span>
-                  <div class="stars">
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- User Message + Date -->
-              <p>
-                "Am început antrenamentele cu domnul Andrei de câteva luni și
-                pot spune că progresul se vede, atât fizic, cât și psihic. Mă
-                simt mai încrezător în puterile și abilitățile mele. Andrei este
-                extrem de profesionist și pasionat, iar atmosfera din cadrul
-                antrenamentelor este relaxată și încurajatoare. Recomand cu
-                încredere."
-              </p>
-              <p class="rating-data">
-                Date: <span class="text-white">02/03/2023</span>
-              </p>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div class="carousel-item carousel-border p-3">
-            <div class="user-review">
-              <!-- User Details -->
-              <div class="user-details">
-                <img
-                  src="/Assets/ratings/image-ionut.jpg"
-                  alt="User"
-                  style="width: 80px"
-                />
-                <div class="user-info">
-                  <h5>Ionut Avasiloae</h5>
-                  <span class="verified">Verified Buyer</span>
-                  <div class="stars">
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                    <img
-                      class="star"
-                      src="/Assets/ratings/icon-star.svg"
-                      alt="star"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- User Message + Date -->
-              <p>
-                "Excelent! Dupa doar cateva sedinte copilul meu nu mai vroia sa
-                paraseasca bazinul, s-a bucurat de fiecare moment in apa!"
-              </p>
-              <p class="rating-data">
-                Date: <span class="text-white">02/03/2023</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Left Btn -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-
-        <!-- Right Btn -->
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer pt-5 px-3 " id="program" id="program">
-      <div
-        class="container row justify-content-md-center align-content-md-center text-md-start"
-      >
-        <!-- Program (Fizic) -->
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5 reveal"
-        >
-          <p href="#" class="text-uppercase fw-bold">Program Fizic</p>
-          <hr class="solid" />
-          <p class="fw-bold">Luni - Vineri:</p>
-          <p>07:00 AM - 23:00 PM</p>
-          <p class="fw-bold">Sâmbătă - Duminică:</p>
-          <p>08:00 AM - 20:00 PM</p>
-        </div>
-
-        <!-- Program (Online) -->
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5 reveal"
-        >
-          <p href="#" class="text-uppercase fw-bold">Program Online</p>
-          <hr class="solid" />
-          <p class="fw-bold">Luni - Duminică:</p>
-          <p>07:00 AM - 23:00 PM</p>
-          <p class="fw-bold">Sâmbătă - Duminică:</p>
-          <p>08:00 AM - 20:00 PM</p>
-        </div>
-
-        <!-- ANPC -->
-        <div
-          class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5 reveal"
-        >
-          <p class="text-uppercase">
-            <a href="#home" class="color-hover fw-bold"
-              >LVLUP University
-              <span>
-                &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-              </span>
+    <!-- Cel Vechi -->
+    <!-- Tabel ABONAMENT -->
+    <div class="my-5 table-container reveal d-none">
+      <table class="table text-white">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">Tip</th>
+            <th scope="col">Nr. Sedinte</th>
+            <th scope="col">Durata</th>
+            <th scope="col">Pret Vechi</th>
+            <th scope="col">
+              <span class="text-uppercase font-marker">Pret Nou</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <!-- Grup -->
+          <tr class="text-center">
+            <th scope="row">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+                <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+                <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
+              </svg>
               <br />
-            </a>
+              Grup
+            </th>
+            <td>4</td>
+            <td>30 Zile</td>
+            <td class="text-decoration-line-through">300 RON</td>
+            <td class="fw-bold primary-color">199 RON</td>
+          </tr>
+          <tr class="text-center">
+            <th scope="row">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+                <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+                <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
+              </svg>
+              <br />
+              Grup
+            </th>
+            <td>8</td>
+            <td>30 Zile</td>
+            <td class="text-decoration-line-through">500 RON</td>
+            <td class="fw-bold primary-color">399 RON</td>
+          </tr>
+          <!-- Individual -->
+          <tr class="text-center">
+            <th scope="row">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+              </svg>
+              <br />
+              Individual
+            </th>
+            <td>4</td>
+            <td>30 Zile</td>
+            <td class="text-decoration-line-through">400 RON</td>
+            <td class="fw-bold primary-color">299 RON</td>
+          </tr>
+          <tr class="text-center">
+            <th scope="row">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+              </svg>
+              <br />
+              Individual
+            </th>
+            <td>8</td>
+            <td>30 Zile</td>
+            <td class="text-decoration-line-through">600 RON</td>
+            <td class="fw-bold primary-color">499 RON</td>
+          </tr>
+          <!-- Online -->
+          <tr class="text-center" id="informatii-ABONAMENT">
+            <th scope="row">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-laptop" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 19l18 0"></path>
+                <path d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"></path>
+              </svg>
+              <br />
+              Online
+            </th>
+            <td>24/24</td>
+            <td>30 Zile</td>
+            <td class="text-decoration-line-through">500 RON</td>
+            <td class="fw-bold primary-color">249 RON</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- Location Map -->
+  <div class="container bg-black p-1 p-sm-2 p-md-4 p-lg-5" id="locatie">
+    <!-- Text -->
+    <div class="container">
+      <!-- Titlu  -->
+      <h1 class="text-center h-text my-5 reveal">Locatie</h1>
+      <!-- Continut -->
+      <div class="row text-center">
+        <!-- Stay Fit Gym - Pantelimon -->
+        <div class="col-md-6 text-wrap text-white align-self-center my-5 text-size-md reveal">
+          <p>
+            <span class="primary-color fw-bold">
+              Stay Fit Gym - Pantelimon
+            </span>
           </p>
-          <hr class="solid" />
-          <p class="">All rights reserved.</p>
-          <!-- ANPC -->
-          <div class="container">
-            <a href="https://anpc.ro/ce-este-sal/" target="_blank">
-              <img
-                src="/assets/anpc/sal.svg"
-                alt="sal"
-                class="transform-scale-xsml"
-              />
-            </a>
-            <a
-              href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage"
-              target="_blank"
-            >
-              <img
-                src="/assets/anpc/sol.svg"
-                alt="sol"
-                class="transform-scale-xsml"
-              />
-            </a>
+          <p class="text-map">
+            Stay Fit Gym - Pantelimon, Bulevardul Chișinău 1, București 022141
+          </p>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11393.66290536572!2d26.1575!3d44.445146!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f92ff495235d%3A0xa67b9131c2d3d501!2sStay%20Fit%20Gym%20-%20Pantelimon!5e0!3m2!1sen!2sro!4v1704392822832!5m2!1sen!2sro"
+              style="width: 100%; height: 400px" class="container bg-white box-border reveal" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Stay Fit Gym - Fizicienilor -->
+        <div class="col-md-6 text-wrap text-white align-self-center my-5 text-size-md reveal">
+          <p>
+            <span class="primary-color fw-bold">
+              Stay Fit Gym - Fizicienilor
+            </span>
+          </p>
+          <p class="text-map">
+            Stay Fit Gym - Fizicienilor, Strada Fizicienilor 1, București
+            077160
+          </p>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.9934431918027!2d26.14757267650583!3d44.41278027107622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff1eed39824b%3A0xe65c8cbbce5487a8!2sStay%20Fit%20Gym%20-%20Fizicienilor!5e0!3m2!1sen!2sro!4v1704393038175!5m2!1sen!2sro"
+              style="width: 100%; height: 400px" class="container bg-white box-border reveal" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
-    <!-- Ko-Fi -->
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-    <script>  kofiWidgetOverlay.draw('lvlup', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'LVLUP',
-        'floating-chat.donateButton.background-color': '#ffa224',
-        'floating-chat.donateButton.text-color': '#000'
-      });
-    </script>
+  <!-- Contact -->
+  <section class="container p-1 p-sm-2 p-md-4 p-lg-5" id="contact">
+    <!-- Title -->
+    <div class="text-center p-1 p-sm-2 p-md-4 p-lg-5 reveal mx-5">
+      <h2 class="h-text">Contact</h2>
+      <h4 class="text-light text-center text-size-md">
+        Pentru orice informatie nu ezitati sa ne contactati
+      </h4>
+    </div>
+    <!-- Form Section -->
+    <div class="container">
+      <div class="row">
+        <!-- Left Container -->
+        <div class="col-md-5 contact-container justify-content-start">
+          <div class="row reveal">
+            <h2 class="h-text">Social Media</h2>
+          </div>
+          <div class="row reveal">
+            <h4 class="text-light text-left text-size-lg">
+              <p class="my-5">
+                <a href="tel:+40771810711" target="_blank" class="social-color">
+                  <i class="fa-solid fa-phone" style="color: var(--color-3)"></i>
+                  +40 771 810 710
+                </a>
+              </p>
+              <p class="my-5">
+                <a href="https://wa.me/0771810710" target="_blank" class="social-color">
+                  <i class="fa-brands fa-whatsapp" style="color: var(--color-3)"></i>
+                  +40 771 810 710
+                </a>
+              </p>
+              <p class="my-5">
+                <a href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr"
+                  target="_blank" class="social-color">
+                  <i class="fa-brands fa-facebook" style="color: var(--color-3)"></i>
+                  LVLUP University
+                </a>
+              </p>
+              <p class="my-5">
+                <a href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr"
+                  target="_blank" class="social-color">
+                  <i class="fa-brands fa-instagram" style="color: var(--color-3)"></i>
+                  LVLUP University
+                </a>
+              </p>
+              <p class="my-5 d-none">
+                <i class="fa-brands fa-tiktok" style="color: #ffffff"></i>
+                Cursuri_Inot_LVLUP
+              </p>
+            </h4>
+          </div>
+        </div>
 
-    <!-- Button Go to TOP -->
-    <div class="btn-to-top grow-and-shrink">
-      <button
-        onclick="topFunction()"
-        class="btn primary-bg btn-lg rounded-pill transform-scale-md"
-        type="button"
-        title="Go to top"
-      >
-        <i class="fa-solid fa-angles-up"></i>
+        <!-- Midle Container -->
+        <h2 class="col-md-2 contact-container text-center h-text d-none d-md-block reveal">
+          /
+        </h2>
+
+        <!-- Right Container -->
+        <div class="col-md-5 contact-container">
+          <div class="row reveal">
+            <h1 class="h-text">Email</h1>
+          </div>
+          <div class="row reveal">
+            <h4 class="text-center text-light"></h4>
+          </div>
+          <form class="row form-container reveal wrapper-confetti" action="https://formspree.io/f/xbjngayw"
+            method="POST" name="contact-form" accept-charset="utf-8">
+            <div class="col-xs-12">
+              <div class="col-xs-12">
+                <select class="styled-input wide select-style fw-bold" name="_optin" required>
+                  <option value="Nivel-1">Nivel 1</option>
+                  <option value="Nivel-2">Nivel 2</option>
+                  <option value="Nivel-3">Nivel 3</option>
+                </select>
+              </div>
+              <div class="styled-input wide">
+                <input type="text" name="name" required />
+                <label>Nume</label>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="styled-input wide">
+                <input type="email" name="_replyto" required />
+                <label>Email</label>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="styled-input wide">
+                <input type="text" name="number" required />
+                <label>Numar Telefon</label>
+              </div>
+            </div>
+
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <textarea name="message" id="message" required></textarea>
+                <label>Mesaj</label>
+              </div>
+            </div>
+            <input type="hidden" name="_subject" id="email-subject" value="Survey Responses" />
+            <button class="col btn-submit btn btn-lg primary-bg fw-semibold confetti-button" type="submit"
+              value="Contact Form Submission">
+              Trimite
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rating -->
+  <section class="container" id="recenzii">
+    <!-- Rating Title  -->
+    <div class="container my-5">
+      <div class="header-content container reveal text-size-md">
+        <h1>
+          Experiența de <span class="color-primary-text">5 ani</span> în
+          domeniu
+        </h1>
+        <p class="text-justify">
+          Oferim doar
+          <span class="color-primary-text">servicii excelente</span>
+          pentru clienții noștri. Citeste mai jos ce au de spus clienții
+          despre serviciile noastre.
+        </p>
+      </div>
+    </div>
+    <!-- Rating Carousel -->
+    <div id="carouselExampleAutoplaying" class="carousel slide container reveal p-1 p-sm-2 p-md-4 p-lg-5"
+      data-bs-ride="carousel">
+      <!-- Cards -->
+      <div class="carousel-inner rating-container text-justify text-size-md">
+        <!-- Card 1 -->
+        <div class="carousel-item carousel-border p-3 active">
+          <div class="user-review">
+            <!-- User Details -->
+            <div class="user-details">
+              <img src="/Assets/ratings/image-alex.png" alt="User" style="width: 80px" />
+              <div class="user-info">
+                <h5>Alexandru Ghezea</h5>
+                <span class="verified">Verified Buyer</span>
+                <div class="stars">
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- User Message + Date -->
+            <p>
+              "L-am înscris pe fiul meu la ședințele cu Andrei pentru a-i
+              îmbunătăți încrederea și îndemânarea. Am fost impresionat de
+              progresele pe care le-a făcut în doar câteva săptămâni.
+              Antrenorul este atent și dedicat, iar metodele sale de învățare
+              sunt eficiente. Recomand cu încredere!"
+            </p>
+            <p class="rating-data">
+              Date: <span class="text-white">14/05/2023</span>
+            </p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="carousel-item carousel-border p-3">
+          <div class="user-review">
+            <!-- User Details -->
+            <div class="user-details">
+              <img src="/Assets/ratings/image-irene.jpg" alt="User" style="width: 80px" />
+              <div class="user-info">
+                <h5>Georgiana Halbu</h5>
+                <span class="verified">Verified Buyer</span>
+                <div class="stars">
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- User Message + Date -->
+            <p>
+              "Sunt foarte mulțumită de progresele pe care le-am făcut alaturi
+              de Andrei. Este atent și dedicat, iar metodele sale de învățare
+              sunt eficiente și distractive. Recomand!"
+            </p>
+            <p class="rating-data">
+              Date: <span class="text-white">16/02/2023</span>
+            </p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="carousel-item carousel-border p-3">
+          <div class="user-review">
+            <!-- User Details -->
+            <div class="user-details">
+              <img src="/Assets/ratings/image-anne.jpg" alt="User" style="width: 80px" />
+              <div class="user-info">
+                <h5>Ana-Maria Dimitrov</h5>
+                <span class="verified">Verified Buyer</span>
+                <div class="stars">
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- User Message + Date -->
+            <p>
+              "Am venit aici pe recomandarea unei prietene. Încă nu pot să
+              înțeleg câtă răbdare și pasiune oferă când vine vorba de
+              corectarea exercițiilor sau îmbunătățirea tehnicii."
+            </p>
+            <p class="rating-data">
+              Date: <span class="text-white">02/03/2023</span>
+            </p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="carousel-item carousel-border p-3">
+          <div class="user-review">
+            <!-- User Details -->
+            <div class="user-details">
+              <img src="/Assets/ratings/image-george.jpg" alt="User" style="width: 80px" />
+              <div class="user-info">
+                <h5>George Nistor</h5>
+                <span class="verified">Verified Buyer</span>
+                <div class="stars">
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- User Message + Date -->
+            <p>
+              "Am început antrenamentele cu domnul Andrei de câteva luni și
+              pot spune că progresul se vede, atât fizic, cât și psihic. Mă
+              simt mai încrezător în puterile și abilitățile mele. Andrei este
+              extrem de profesionist și pasionat, iar atmosfera din cadrul
+              antrenamentelor este relaxată și încurajatoare. Recomand cu
+              încredere."
+            </p>
+            <p class="rating-data">
+              Date: <span class="text-white">02/03/2023</span>
+            </p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="carousel-item carousel-border p-3">
+          <div class="user-review">
+            <!-- User Details -->
+            <div class="user-details">
+              <img src="/Assets/ratings/image-ionut.jpg" alt="User" style="width: 80px" />
+              <div class="user-info">
+                <h5>Ionut Avasiloae</h5>
+                <span class="verified">Verified Buyer</span>
+                <div class="stars">
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                  <img class="star" src="/Assets/ratings/icon-star.svg" alt="star" />
+                </div>
+              </div>
+            </div>
+            <!-- User Message + Date -->
+            <p>
+              "Excelent! Dupa doar cateva sedinte copilul meu nu mai vroia sa
+              paraseasca bazinul, s-a bucurat de fiecare moment in apa!"
+            </p>
+            <p class="rating-data">
+              Date: <span class="text-white">02/03/2023</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left Btn -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!-- Right Btn -->
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
       </button>
     </div>
+  </section>
 
-    <!-- Social Bar -->
-    <div class="float-sm social-bar">
-      <div class="fl-fl float-fb">
-        <i class="fa-solid fa-phone"></i>
-        <a href="tel:+40771810711" target="_blank">+40 771 810 710</a>
+  <!-- Footer Section -->
+  <footer class="footer pt-5 px-3 " id="program" id="program">
+    <div class="container row justify-content-md-center align-content-md-center text-md-start">
+      <!-- Program (Fizic) -->
+      <div class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5 reveal">
+        <p href="#" class="text-uppercase fw-bold">Program Fizic</p>
+        <hr class="solid" />
+        <p class="fw-bold">Luni - Vineri:</p>
+        <p>07:00 AM - 23:00 PM</p>
+        <p class="fw-bold">Sâmbătă - Duminică:</p>
+        <p>08:00 AM - 20:00 PM</p>
       </div>
-      <div class="fl-fl float-tw">
-        <i class="fa-brands fa-whatsapp"></i>
-        <a href="https://wa.me/0771810711" target="_blank">+40 771 810 710</a>
-      </div>
-      <div class="fl-fl float-gp">
-        <i class="fa-brands fa-facebook"></i>
-        <a href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr" target="_blank"
-          >LVLUP University</a
-        >
-      </div>
-      <div class="fl-fl float-ig">
-        <i class="fa-brands fa-instagram"></i>
-        <a href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr" target="_blank"
-          >LVLUP University</a
-        >
-      </div>
-      <div class="fl-fl float-pn d-none">
-        <i class="fa-brands fa-tiktok"></i>
-        <a href="" target="_blank">LVLUP University</a>
-      </div>
-    </div>
 
-    <!-- Progress Bar -->
-    <div id="progress-bar" class="progress-bar"></div>
+      <!-- Program (Online) -->
+      <div class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5 reveal">
+        <p href="#" class="text-uppercase fw-bold">Program Online</p>
+        <hr class="solid" />
+        <p class="fw-bold">Luni - Duminică:</p>
+        <p>07:00 AM - 23:00 PM</p>
+        <p class="fw-bold">Sâmbătă - Duminică:</p>
+        <p>08:00 AM - 20:00 PM</p>
+      </div>
 
-    <!-- Cookie -->
-    <div
-      class="offcanvas offcanvas-bottom"
-      style="height: auto !important; --bs-bg-opacity: 0.85"
-      tabindex="-1"
-      id="offcanvas"
-      data-bs-scroll="true"
-      data-bs-backdrop="false"
-      aria-labelledby="offcanvasLabel"
-    >
-      <div
-        class="offcanvas-body d-flex flex-column flex-sm-row align-items-center justify-content-around gap-3"
-      >
-        <div class="small">
-          We use cookies to ensure that we give you the best experience on our
-          website. If you continue to use this site, we will assume that you are
-          happy with it.
-        </div>
-        <div class="text-nowrap">
-          <button
-            type="button"
-            class="btn btn-sm btn-cockie me-1"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          >
-            OK
-          </button>
-          <a
-            type="button"
-            href="https://blog.codepen.io/documentation/privacy-policy/"
-            target="_blank"
-            class="btn btn-sm btn-light text-nowrap"
-            aria-label="Close"
-            >Privacy Policy</a
-          >
+      <!-- ANPC -->
+      <div class="col-12 col-md-6 col-lg-6 col-xl-3 d-flex flex-column py-5 py-md-5 py-lg-5 reveal">
+        <p class="text-uppercase">
+          <a href="#home" class="color-hover fw-bold">LVLUP University
+            <span>
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+            </span>
+            <br />
+          </a>
+        </p>
+        <hr class="solid" />
+        <p class="">All rights reserved.</p>
+        <!-- ANPC -->
+        <div class="container">
+          <a href="https://anpc.ro/ce-este-sal/" target="_blank">
+            <img src="/assets/anpc/sal.svg" alt="sal" class="transform-scale-xsml" />
+          </a>
+          <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
+            <img src="/assets/anpc/sol.svg" alt="sol" class="transform-scale-xsml" />
+          </a>
         </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Script -->
-    <!-- rest -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-    <script
-      src="https://kit.fontawesome.com/af8da007ac.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="/js/carousel.js"></script>
-    <script src="/js/navbar.js"></script>
-  </body>
+  <!-- Ko-Fi -->
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <script>  kofiWidgetOverlay.draw('lvlup', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'LVLUP',
+      'floating-chat.donateButton.background-color': '#ffa224',
+      'floating-chat.donateButton.text-color': '#000'
+    });
+  </script>
+
+  <!-- Button Go to TOP -->
+  <div class="btn-to-top grow-and-shrink">
+    <button onclick="topFunction()" class="btn primary-bg btn-lg rounded-pill transform-scale-md" type="button"
+      title="Go to top">
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
+  </div>
+
+  <!-- Social Bar -->
+  <div class="float-sm social-bar">
+    <div class="fl-fl float-fb">
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:+40771810711" target="_blank">+40 771 810 710</a>
+    </div>
+    <div class="fl-fl float-tw">
+      <i class="fa-brands fa-whatsapp"></i>
+      <a href="https://wa.me/0771810711" target="_blank">+40 771 810 710</a>
+    </div>
+    <div class="fl-fl float-gp">
+      <i class="fa-brands fa-facebook"></i>
+      <a href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr"
+        target="_blank">LVLUP University</a>
+    </div>
+    <div class="fl-fl float-ig">
+      <i class="fa-brands fa-instagram"></i>
+      <a href="https://www.instagram.com/lvlup.university?igsh=MTJoc2FrdGVpNTI4ag%3D%3D&utm_source=qr"
+        target="_blank">LVLUP University</a>
+    </div>
+    <div class="fl-fl float-pn d-none">
+      <i class="fa-brands fa-tiktok"></i>
+      <a href="" target="_blank">LVLUP University</a>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div id="progress-bar" class="progress-bar"></div>
+
+  <!-- Cookie -->
+  <div class="offcanvas offcanvas-bottom" style="height: auto !important; --bs-bg-opacity: 0.85" tabindex="-1"
+    id="offcanvas" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-body d-flex flex-column flex-sm-row align-items-center justify-content-around gap-3">
+      <div class="small">
+        We use cookies to ensure that we give you the best experience on our
+        website. If you continue to use this site, we will assume that you are
+        happy with it.
+      </div>
+      <div class="text-nowrap">
+        <button type="button" class="btn btn-sm btn-cockie me-1" data-bs-dismiss="offcanvas" aria-label="Close">
+          OK
+        </button>
+        <a type="button" href="https://blog.codepen.io/documentation/privacy-policy/" target="_blank"
+          class="btn btn-sm btn-light text-nowrap" aria-label="Close">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <!-- rest -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+  <script src="https://kit.fontawesome.com/af8da007ac.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/carousel.js"></script>
+  <script src="/js/navbar.js"></script>
+</body>
+
 </html>

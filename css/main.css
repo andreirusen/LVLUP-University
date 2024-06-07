@@ -64,7 +64,9 @@ font-family: 'Poppins', sans-serif;
 .text-decoration-line-through {
   color: var(--color-1);
 }
-
+.text-map {
+  height: 90px;
+}
 @media (max-width: 768px) {
   .text-size-sml {
     font-family: "Poppins", sans-serif;
@@ -81,6 +83,9 @@ font-family: 'Poppins', sans-serif;
   .text-size-xlg {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
+  }
+  .text-map{
+    height: auto;
   }
 }
 
@@ -112,7 +117,9 @@ footer {
   align-items: center;
   text-align: center;
 }
-
+p {
+  color: var(--color-white);
+}
 /* Element Background Color */
 .primary-color {
   color: var(--color-3);

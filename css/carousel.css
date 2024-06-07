@@ -199,14 +199,21 @@ font-family: 'Poppins', sans-serif;
 .swiper-slide--four {
   border-radius: 25px;
   background:
-    url("/assets/levels/LEVEL 4.png") no-repeat 50% 50% / cover;
+    url("/assets/levels/LEVEL 1.png") no-repeat 50% 50% / cover;
 
 }
 
 .swiper-slide--five {
   border-radius: 25px;
   background:
-    url("/assets/levels/LEVEL 5.png") no-repeat 50% 50% / cover;
+    url("/assets/levels/LEVEL 2.png") no-repeat 50% 50% / cover;
+
+}
+
+.swiper-slide--six {
+  border-radius: 25px;
+  background:
+    url("/assets/levels/LEVEL 3.png") no-repeat 50% 50% / cover;
 
 }
 
